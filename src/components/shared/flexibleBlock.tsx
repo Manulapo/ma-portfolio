@@ -72,34 +72,49 @@ const FlexBlock = ({
     };
   }, [relevance]);
 
-  const renderCardContent = useMemo(
-    () => (
-      <div className="w-full h-fit flex flex-col gap-2 py-2">
-        <CardHeader className="h-full flex flex-col justify-end gap-2">
-          {title && (
-            <CardTitle>
-              <div
-                className={cn(
-                  backgroundImage
-                    ? "text-white text-3xl text-shadow-lg"
-                    : "text-black text-xl",
-                  "font-bold text-nowrap"
-                )}
-              >
-                {title}
-              </div>
-            </CardTitle>
-          )}
-          {description && (
-            <CardDescription>
-              <p className="text-muted-foreground">{description}</p>
-            </CardDescription>
-          )}
-        </CardHeader>
-      </div>
-    ),
-    [title, description, backgroundImage]
-  );
+  const renderContent = useMemo(() => {
+    return (
+      <>
+        {(title || description) && (
+          <div className="w-full h-fit flex flex-col gap-2 py-2">
+            <CardHeader className="h-full flex flex-col justify-end gap-2">
+              {title && (
+                <CardTitle>
+                  <div
+                    className={cn(
+                      backgroundImage
+                        ? "text-white text-3xl text-shadow-lg"
+                        : "text-black text-xl",
+                      "font-bold text-nowrap"
+                    )}
+                  >
+                    {title}
+                  </div>
+                </CardTitle>
+              )}
+              {description && (
+                <CardDescription>
+                  <p className="text-muted-foreground">{description}</p>
+                </CardDescription>
+              )}
+            </CardHeader>
+          </div>
+        )}
+        {children && (
+          <CardContent
+            className={`${
+              !title &&
+              !description &&
+              "w-full h-full flex flex-col justify-center"
+            } `}
+          >
+            {children}
+          </CardContent>
+        )}
+      </>
+    );
+  }, [title, description, children]);
+
   return (
     <Card
       className={cn(
@@ -117,22 +132,16 @@ const FlexBlock = ({
           backgroundColor && !backgroundImage ? backgroundColor : undefined,
       }}
     >
-      {(title || description) &&
-        (linkTo ? (
-          <Link to={linkTo}>{renderCardContent}</Link>
-        ) : (
-          renderCardContent
-        ))}
-      {children && (
-        <CardContent
-          className={`${
-            !title &&
-            !description &&
-            "w-full h-full flex flex-col justify-center"
-          } `}
+      {linkTo ? (
+        <Link
+          to={linkTo}
+          className="w-full h-full flex flex-col justify-end"
+          style={{ textDecoration: "none" }} // Optional: Remove underline from the link
         >
-          {children}
-        </CardContent>
+          {renderContent}
+        </Link>
+      ) : (
+        renderContent
       )}
     </Card>
   );

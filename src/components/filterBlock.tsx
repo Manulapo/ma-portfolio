@@ -1,30 +1,23 @@
-import { Power } from "lucide-react";
+import { useState } from "react";
+import { ToolsUsedInterface } from "../../types";
+import { skillsObj } from "../constants/icon";
+import { cn } from "../lib/utils";
 import GridBlock from "./shared/blockgrid";
 import FlexBlock from "./shared/flexibleBlock";
-import { useState } from "react";
 import { Button } from "./ui/button";
-import { cn } from "../lib/utils";
-
-const skillsObj: Record<string, string[]> = {
-  Data_Analisys: ["skill1", "skill2", "skill3"],
-  Data_Visualization: ["skill4", "skill5"],
-};
 
 const FilterBlocks = () => {
-  const defaultState = [
-    ...skillsObj.Data_Analisys,
-    ...skillsObj.Data_Visualization,
-  ];
-  const [skills, setSkills] = useState<string[]>(defaultState);
+  const [skills, setSkills] =
+    useState<Record<string, ToolsUsedInterface[]>>(skillsObj);
   const [activeButton, setActiveButton] = useState<string>("all");
   const buttons = ["all", ...Object.keys(skillsObj)];
 
   const handleClick = (key: string) => {
     setActiveButton(key);
     if (key !== "all") {
-      setSkills(skillsObj[key]);
+      setSkills({ [key]: skillsObj[key] });
     } else {
-      setSkills(defaultState);
+      setSkills(skillsObj);
     }
   };
 
@@ -36,7 +29,7 @@ const FilterBlocks = () => {
             key={b}
             id={b}
             className={cn(
-              "mt-2 px-1 cursor-pointer rounded-full border p-4 w-fit",
+              "mt-2 px-1 cursor-pointer rounded-full border p-4 w-fit bg-white",
               b === activeButton ? "opacity-100" : "opacity-60"
             )}
             variant={"outline"}
@@ -51,19 +44,25 @@ const FilterBlocks = () => {
         ))}
       </div>
       <GridBlock>
-        {skills.map((skill) => (
-          <FlexBlock
-            className="flex items-center p-0"
-            key={skill}
-            relevance={1}
-            height="quarter"
-          >
-            <div className="flex gap-3">
-              <Power />
-              <p>{skill}</p>
-            </div>
-          </FlexBlock>
-        ))}
+        {Object.entries(skills).map(([key, tools]) =>
+          tools.map((tool, index) => (
+            <FlexBlock
+              className="flex items-center p-0"
+              key={`${key}-${index}`}
+              relevance={1}
+              height="quarter"
+            >
+              <div className="flex gap-3 items-center">
+                <img
+                  src={tool.icon}
+                  alt={tool.name}
+                  className="w-6 h-6"
+                />
+                <p>{tool.name}</p>
+              </div>
+            </FlexBlock>
+          ))
+        )}
       </GridBlock>
     </div>
   );

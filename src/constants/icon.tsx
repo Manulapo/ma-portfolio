@@ -1,5 +1,5 @@
 import { File, Github, Linkedin, Mail, Navigation, Phone } from "lucide-react";
-import { SidebarIconType } from "../../types";
+import { SidebarIconType, ToolsUsedInterface } from "../../types";
 
 export const attachmentSIcon = {
   pdf: {
@@ -72,4 +72,31 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
     icon: File,
     link: "/path/to/your/resume.pdf",
   },
+};
+
+export const skillsObj: Record<string, ToolsUsedInterface[]> = {
+  Data_Analisys: [
+    {
+      name: "skill1",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "skill2",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+    {
+      name: "skill3",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+  ],
+  Data_Visualization: [
+    {
+      name: "skill4",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      name: "skill5",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+  ],
 };

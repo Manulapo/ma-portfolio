@@ -25,7 +25,7 @@ const Main = () => {
         />
         <FlexBlock relevance={1}>
           <Link to="/about">
-            <BigIcon iconType={ChevronRight} text={"GoTo"} animation={'animate-pulse'} />
+            <BigIcon iconType={ChevronRight} text={"GoTo"} animation={'animate-pulse'} colour="text-blue-400"/>
           </Link>
         </FlexBlock>
         <FlexBlock

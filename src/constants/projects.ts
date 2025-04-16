@@ -11,7 +11,7 @@ export const project1: ProjectHeaderInterface = {
   description: "This is a description of project 1",
   triggerLabel: "Cliccami per il project 1",
   previewImage:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "https://townsquare.media/site/442/files/2013/11/lego-movie-posters-lead-photo.jpg?w=780&q=75",
   tools: [react, redux, typescript],
   attachments: [
     {
@@ -35,7 +35,7 @@ export const project2: ProjectHeaderInterface = {
   description: "This is a description of project 2",
   triggerLabel: "Cliccami per il project 2",
   previewImage:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
   tools: [react, redux, typescript],
   attachments: [
     {

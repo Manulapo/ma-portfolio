@@ -17,9 +17,8 @@ const Projects = () => {
       <GridBlock>
         <FlexBlock
           title="Lego Project"
-          backgroundImage="https://townsquare.media/site/442/files/2013/11/lego-movie-posters-lead-photo.jpg?w=780&q=75"
+          backgroundImage={project1.previewImage}
           relevance={5}
-          linkTo=""
         />
         <FlexBlock relevance={1}>
           <ProjectDialog project={project1}>
@@ -27,9 +26,8 @@ const Projects = () => {
           </ProjectDialog>
         </FlexBlock>
         <FlexBlock relevance={1}>
-          <BigIcon iconType={Database} text={"Live Dashboard"} />
+          <BigIcon iconType={Database} text={"Live Dashboard"} colour="text-amber-400"/>
         </FlexBlock>
-
       </GridBlock>
       {/* Project 2 */}
       <GridBlock>
@@ -42,7 +40,7 @@ const Projects = () => {
         </FlexBlock>
         <FlexBlock
           title="Restaurant Project"
-          backgroundImage="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+          backgroundImage={project2.previewImage}
           relevance={4}
         />
         <FlexBlock relevance={1}>
@@ -51,7 +49,7 @@ const Projects = () => {
           </ProjectDialog>
         </FlexBlock>
         <FlexBlock relevance={1}>
-          <BigIcon iconType={Download} text={"DownloadPdf"} />
+          <BigIcon iconType={Download} text={"Download Pdf"} colour="text-emerald-400"/>
         </FlexBlock>
       </GridBlock>
     </div>

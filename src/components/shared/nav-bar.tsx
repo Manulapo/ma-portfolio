@@ -16,7 +16,7 @@ const navbarLinksObj = {
     link: "/projects",
   },
   skills: {
-    name: "Skills",
+    name: "Skills & Certifications",
     link: "/skills",
   },
 };
@@ -24,7 +24,6 @@ const navbarLinksObj = {
 const NavBar = () => {
   const location = useLocation(); // Get the current location object
   const pathName = location.pathname; // Extract the pathname
-  console.log(pathName); // Log the pathname to the console
 
   const isRootPath = pathName === "/"; // Check if the current path is the root
 
