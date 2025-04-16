@@ -30,7 +30,7 @@ const FilterBlocks = () => {
 
   return (
     <div key={activeButton}>
-      <div className="button gap-2 flex">
+      <div className="button gap-2 flex ml-4">
         {buttons.map((b) => (
           <Button
             key={b}

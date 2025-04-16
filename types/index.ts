@@ -25,9 +25,18 @@ export interface AttachmentInterface {
 
 export interface SidebarIconType {
   name: string;
-  icon:React.ForwardRefExoticComponent<
+  icon:
+    | React.ForwardRefExoticComponent<
         Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
       >
     | string;
   link: string;
 }
+
+export type tailwindAnimations =
+  | "hover:animate-pulse"
+  | "animate-pulse"
+  | "animate-bounce"
+  | "animate-spin"
+  | "animate-ping"
+  | "animate-none";

@@ -1,3 +1,5 @@
+import { Atom, Database, Download, FileText } from "lucide-react";
+import BigIcon from "../../components/shared/bigIcon";
 import GridBlock from "../../components/shared/blockgrid";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Heading from "../../components/shared/heading";
@@ -14,48 +16,42 @@ const Projects = () => {
       {/* Project 1 */}
       <GridBlock>
         <FlexBlock
-          title="Docs"
-          description="Documentation and guides"
+          title="Lego Project"
+          backgroundImage="https://townsquare.media/site/442/files/2013/11/lego-movie-posters-lead-photo.jpg?w=780&q=75"
           relevance={5}
-        >
-          <p>Explore the documentation to get started.</p>
-        </FlexBlock>
+          linkTo=""
+        />
         <FlexBlock relevance={1}>
           <ProjectDialog project={project1}>
-            <p>Discover projects built with our tools.</p>
+            <BigIcon iconType={FileText} text={"Go to Project"} />
           </ProjectDialog>
         </FlexBlock>
-        <FlexBlock
-          title="Showcase"
-          description="Examples and inspiration"
-          relevance={1}
-        />
+        <FlexBlock relevance={1}>
+          <BigIcon iconType={Database} text={"Live Dashboard"} />
+        </FlexBlock>
+
       </GridBlock>
       {/* Project 2 */}
       <GridBlock>
         <FlexBlock
           title="Docs"
           description="Documentation and guides"
-          relevance={5}
+          relevance={2}
         >
           <p>Explore the documentation to get started.</p>
         </FlexBlock>
         <FlexBlock
-          title="Docs"
-          description="Documentation and guides"
+          title="Restaurant Project"
+          backgroundImage="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
           relevance={4}
-        >
-          <p>Explore the documentation to get started.</p>
-        </FlexBlock>
-        <FlexBlock
-          title="Showcase"
-          description="Examples and inspiration"
-          relevance={1}
         />
         <FlexBlock relevance={1}>
           <ProjectDialog project={project2}>
-            <p>Discover projects built with our tools.</p>
+            <BigIcon iconType={Atom} text={"Go to Project"} />
           </ProjectDialog>
+        </FlexBlock>
+        <FlexBlock relevance={1}>
+          <BigIcon iconType={Download} text={"DownloadPdf"} />
         </FlexBlock>
       </GridBlock>
     </div>

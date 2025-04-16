@@ -1,3 +1,6 @@
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import BigIcon from "../../components/shared/bigIcon";
 import GridBlock from "../../components/shared/blockgrid";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Section from "../../components/shared/section";
@@ -20,12 +23,10 @@ const Main = () => {
           backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
           relevance={2}
         />
-        <FlexBlock
-          title="Showcase"
-          description="Examples and inspiration"
-          relevance={5}
-        >
-          <p>Discover projects built with our tools.</p>
+        <FlexBlock relevance={1}>
+          <Link to="/about">
+            <BigIcon iconType={ChevronRight} text={"GoTo"} animation={'animate-pulse'} />
+          </Link>
         </FlexBlock>
         <FlexBlock
           title="Showcase"

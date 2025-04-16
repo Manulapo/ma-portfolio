@@ -133,7 +133,16 @@
 }
 
 .flexblock.image:hover {
-  background-size: 110%;
+  background-size: 105%;
   background-position: center;
   opacity: 1;
+}
+
+/* Disable hover effects on mobile devices */
+@media (hover: none) {
+  .flexblock {
+    background-size: 105%; /* Set the final hover state as default */
+    background-position: center;
+    opacity: 1;
+  }
 }

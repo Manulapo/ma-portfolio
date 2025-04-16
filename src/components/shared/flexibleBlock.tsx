@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { blockColours } from "../../constants/colours";
 import { cn } from "../../lib/utils";
 import {
   Card,
@@ -7,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { blockColours } from "../../constants/colours";
 
 let lastColor: string | null = null;
 
@@ -31,6 +32,7 @@ const FlexBlock = ({
   relevance,
   height = "full",
   backgroundImage,
+  linkTo,
   backgroundColor = getColour(),
   children,
 }: {
@@ -41,6 +43,7 @@ const FlexBlock = ({
   height?: "full" | "half" | "quarter";
   backgroundImage?: string;
   backgroundColor?: string;
+  linkTo?: string;
   className?: string;
   children?: React.ReactNode;
 }) => {
@@ -68,6 +71,35 @@ const FlexBlock = ({
       window.removeEventListener("resize", calculateWidth);
     };
   }, [relevance]);
+
+  const renderCardContent = useMemo(
+    () => (
+      <div className="w-full h-fit flex flex-col gap-2 py-2">
+        <CardHeader className="h-full flex flex-col justify-end gap-2">
+          {title && (
+            <CardTitle>
+              <div
+                className={cn(
+                  backgroundImage
+                    ? "text-white text-3xl text-shadow-lg"
+                    : "text-black text-xl",
+                  "font-bold text-nowrap"
+                )}
+              >
+                {title}
+              </div>
+            </CardTitle>
+          )}
+          {description && (
+            <CardDescription>
+              <p className="text-muted-foreground">{description}</p>
+            </CardDescription>
+          )}
+        </CardHeader>
+      </div>
+    ),
+    [title, description, backgroundImage]
+  );
   return (
     <Card
       className={cn(
@@ -85,31 +117,12 @@ const FlexBlock = ({
           backgroundColor && !backgroundImage ? backgroundColor : undefined,
       }}
     >
-      {(title || description) && (
-        <div className="w-full h-fit flex flex-col gap-2 py-2">
-          <CardHeader className="h-full flex flex-col justify-end gap-2">
-            {title && (
-              <CardTitle >
-                <div
-                  className={cn(
-                    backgroundImage
-                      ? "text-white text-3xl text-shadow-lg"
-                      : "text-black text-xl",
-                    "font-bold"
-                  )}
-                >
-                  {title}
-                </div>
-              </CardTitle>
-            )}
-            {description && (
-              <CardDescription>
-                <p className="text-muted-foreground">{description}</p>
-              </CardDescription>
-            )}
-          </CardHeader>
-        </div>
-      )}
+      {(title || description) &&
+        (linkTo ? (
+          <Link to={linkTo}>{renderCardContent}</Link>
+        ) : (
+          renderCardContent
+        ))}
       {children && (
         <CardContent
           className={`${
