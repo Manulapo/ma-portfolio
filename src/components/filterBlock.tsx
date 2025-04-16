@@ -45,8 +45,8 @@ const FilterBlocks = () => {
       </div>
       <GridBlock>
         {skills.map((skill) => (
-          <FlexBlock key={skill} relevance={1} height="half">
-            <div className="flex text-nowrap gap-4 items-center h-full">
+          <FlexBlock className="flex items-center p-0" key={skill} relevance={1} height="quarter">
+            <div className="flex gap-3">
               <Power />
               <p>{skill}</p>
             </div>

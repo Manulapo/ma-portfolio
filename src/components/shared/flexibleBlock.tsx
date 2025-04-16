@@ -22,14 +22,18 @@ const FlexBlock = ({
   title?: string;
   description?: string;
   footer?: string;
-  height?: "full" | "half";
+  height?: "full" | "half" | "quarter";
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }) => {
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
   const standardHeight = 200;
   const blockHeight =
-    (height === "full" ? standardHeight : standardHeight / 2).toString() + "px";
+    height === "full"
+      ? standardHeight
+      : height === "half"
+      ? (standardHeight / 2).toString() + "px"
+      : (standardHeight / 3.5).toString() + "px";
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -46,7 +50,7 @@ const FlexBlock = ({
       window.removeEventListener("resize", calculateWidth);
     };
   }, [relevance]);
-    return (
+  return (
     <Card
       className={cn(
         `shrink-0 bg-blue-200 min-w-[100px] text-white p-4 py-6 flex flex-col items-start rounded-md`,
@@ -70,7 +74,9 @@ const FlexBlock = ({
           </CardHeader>
         </div>
       )}
-      <CardContent className={`pb-2 ${!title && !description && "w-full h-full"} `}>
+      <CardContent
+        className={`${!title && !description && "w-full h-full flex flex-col justify-center"} `}
+      >
         {children}
       </CardContent>
       {footer && (
