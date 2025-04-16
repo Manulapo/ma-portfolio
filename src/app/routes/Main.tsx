@@ -14,9 +14,7 @@ const Main = () => {
           title="Docs"
           description="Documentation and guides"
           relevance={1}
-        >
-          <p>Explore the documentation to get started.</p>
-        </FlexBlock>
+        />
         <FlexBlock
           title="Blog"
           description="Latest updates and news"

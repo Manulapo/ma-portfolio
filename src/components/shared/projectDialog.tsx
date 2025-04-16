@@ -17,7 +17,7 @@ const ProjectDialog = ({
 }) => {
   return (
     <Dialog>
-      <DialogTrigger className="h-full w-full flex items-center justify-center">
+      <DialogTrigger className="h-full w-full flex items-center justify-center cursor-pointer">
         {children}
       </DialogTrigger>
 

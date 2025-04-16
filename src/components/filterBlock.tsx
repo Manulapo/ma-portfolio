@@ -5,12 +5,12 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 
 const skillsObj: Record<string, string[]> = {
-  data_An: ["skill1", "skill2", "skill3"],
-  data_Vis: ["skill4", "skill5"],
+  Data_Analisys: ["skill1", "skill2", "skill3"],
+  Data_Visualization: ["skill4", "skill5"],
 };
 
 const FilterBlocks = () => {
-  const defaultState = [...skillsObj.data_An, ...skillsObj.data_Vis];
+  const defaultState = [...skillsObj.Data_Analisys, ...skillsObj.Data_Visualization];
   const [skills, setSkills] = useState<string[]>(defaultState);
   const [activeButton, setActiveButton] = useState<string>("all");
   const buttons = ["all", ...Object.keys(skillsObj)];
@@ -46,7 +46,7 @@ const FilterBlocks = () => {
       <GridBlock>
         {skills.map((skill) => (
           <FlexBlock key={skill} relevance={1} height="half">
-            <div className="flex text-nowrap gap-4">
+            <div className="flex text-nowrap gap-4 items-center h-full">
               <Power />
               <p>{skill}</p>
             </div>

@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { cn } from "../../lib/utils";
 
 const FlexBlock = ({
   title,
@@ -23,7 +24,7 @@ const FlexBlock = ({
   footer?: string;
   height?: "full" | "half";
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) => {
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
   const standardHeight = 200;
@@ -45,28 +46,31 @@ const FlexBlock = ({
       window.removeEventListener("resize", calculateWidth);
     };
   }, [relevance]);
-  return (
+    return (
     <Card
-      className={`${
-        className ?? ""
-      } shrink-0 bg-blue-200 h-[${blockHeight}] min-w-[100px] text-white p-4 py-6`}
-      style={{ width: dynamicWidth }}
+      className={cn(
+        `shrink-0 bg-blue-200 min-w-[100px] text-white p-4 py-6 flex flex-col items-start rounded-md`,
+        className
+      )}
+      style={{ width: dynamicWidth, height: blockHeight }} // Use inline styles for height
     >
       {(title || description) && (
-        <CardHeader>
-          {title && (
-            <CardTitle>
-              <div className="h3 h3-bold-text-xl text-black">{title}</div>
-            </CardTitle>
-          )}
-          {description && (
-            <CardDescription>
-              <p className="text-muted-foreground">{description}</p>
-            </CardDescription>
-          )}
-        </CardHeader>
+        <div className="w-full h-fit flex flex-col gap-2 py-2">
+          <CardHeader>
+            {title && (
+              <CardTitle>
+                <div className="h3 h3-bold-text-xl text-black">{title}</div>
+              </CardTitle>
+            )}
+            {description && (
+              <CardDescription>
+                <p className="text-muted-foreground">{description}</p>
+              </CardDescription>
+            )}
+          </CardHeader>
+        </div>
       )}
-      <CardContent className={`${!title && !description && "w-full h-full"} `}>
+      <CardContent className={`pb-2 ${!title && !description && "w-full h-full"} `}>
         {children}
       </CardContent>
       {footer && (

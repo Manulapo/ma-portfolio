@@ -29,7 +29,7 @@ const NavBar = () => {
   const isRootPath = pathName === "/"; // Check if the current path is the root
 
   return (
-    <nav className="flex items-center gap-10 w-full bg-black text-white z-50 fixed">
+    <nav className="flex items-center gap-10 w-full bg-black text-white z-50 fixed ">
       <div className="home-button bg-amber-400 h-full w-[60px] p-4 flex items-center justify-center">
         <SidebarTrigger className="cursor-pointer p-0 hover:bg-transparent hover:text-white hover:opacity-60" />
       </div>
