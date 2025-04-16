@@ -114,8 +114,26 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
+.flexblock {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: .8;
+}
+
+.flexblock:hover {
+  opacity: 1;
+}
+
+.flexblock.image:hover {
+  background-size: 110%;
+  background-position: center;
+  opacity: 1;
+}

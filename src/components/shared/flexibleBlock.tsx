@@ -1,21 +1,37 @@
 import { useEffect, useState } from "react";
+import { cn } from "../../lib/utils";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { cn } from "../../lib/utils";
+import { blockColours } from "../../constants/colours";
+
+let lastColor: string | null = null;
+
+const getColour = () => {
+  let newColor;
+  if (blockColours.length === 1) {
+    return blockColours[0];
+  } else {
+    do {
+      newColor = blockColours[Math.floor(Math.random() * blockColours.length)];
+    } while (newColor === lastColor);
+    lastColor = newColor;
+    return newColor;
+  }
+};
 
 const FlexBlock = ({
   title,
   description,
-  footer,
   className,
   relevance,
   height = "full",
+  backgroundImage,
+  backgroundColor = getColour(),
   children,
 }: {
   relevance: number;
@@ -23,8 +39,10 @@ const FlexBlock = ({
   description?: string;
   footer?: string;
   height?: "full" | "half" | "quarter";
+  backgroundImage?: string;
+  backgroundColor?: string;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) => {
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
   const standardHeight = 200;
@@ -53,17 +71,35 @@ const FlexBlock = ({
   return (
     <Card
       className={cn(
-        `shrink-0 bg-blue-200 min-w-[100px] text-white p-4 py-6 flex flex-col items-start rounded-md`,
+        `shrink-0 bg-blue-100 min-w-[100px] p-4 py-6 flex flex-col items-start rounded-md flexblock`,
+        backgroundImage && "image justify-end",
         className
       )}
-      style={{ width: dynamicWidth, height: blockHeight }} // Use inline styles for height
+      style={{
+        width: dynamicWidth,
+        height: blockHeight,
+        backgroundImage: backgroundImage
+          ? `url('${backgroundImage}')`
+          : undefined,
+        backgroundColor:
+          backgroundColor && !backgroundImage ? backgroundColor : undefined,
+      }}
     >
       {(title || description) && (
         <div className="w-full h-fit flex flex-col gap-2 py-2">
-          <CardHeader>
+          <CardHeader className="h-full flex flex-col justify-end gap-2">
             {title && (
-              <CardTitle>
-                <div className="h3 h3-bold-text-xl text-black">{title}</div>
+              <CardTitle >
+                <div
+                  className={cn(
+                    backgroundImage
+                      ? "text-white text-3xl text-shadow-lg"
+                      : "text-black text-xl",
+                    "font-bold"
+                  )}
+                >
+                  {title}
+                </div>
               </CardTitle>
             )}
             {description && (
@@ -74,15 +110,16 @@ const FlexBlock = ({
           </CardHeader>
         </div>
       )}
-      <CardContent
-        className={`${!title && !description && "w-full h-full flex flex-col justify-center"} `}
-      >
-        {children}
-      </CardContent>
-      {footer && (
-        <CardFooter>
-          <p>{footer}</p>
-        </CardFooter>
+      {children && (
+        <CardContent
+          className={`${
+            !title &&
+            !description &&
+            "w-full h-full flex flex-col justify-center"
+          } `}
+        >
+          {children}
+        </CardContent>
       )}
     </Card>
   );

@@ -21,9 +21,7 @@ const Projects = () => {
           <p>Explore the documentation to get started.</p>
         </FlexBlock>
         <FlexBlock relevance={1}>
-          <ProjectDialog
-            project={project1}
-          >
+          <ProjectDialog project={project1}>
             <p>Discover projects built with our tools.</p>
           </ProjectDialog>
         </FlexBlock>
@@ -31,9 +29,7 @@ const Projects = () => {
           title="Showcase"
           description="Examples and inspiration"
           relevance={1}
-        >
-          <p>Discover projects built with our tools.</p>
-        </FlexBlock>
+        />
       </GridBlock>
       {/* Project 2 */}
       <GridBlock>
@@ -55,13 +51,9 @@ const Projects = () => {
           title="Showcase"
           description="Examples and inspiration"
           relevance={1}
-        >
-          <p>Discover projects built with our tools.</p>
-        </FlexBlock>
+        />
         <FlexBlock relevance={1}>
-          <ProjectDialog
-            project={project2}
-          >
+          <ProjectDialog project={project2}>
             <p>Discover projects built with our tools.</p>
           </ProjectDialog>
         </FlexBlock>

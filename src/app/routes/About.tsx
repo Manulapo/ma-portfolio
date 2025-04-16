@@ -13,9 +13,7 @@ const About = () => {
           title="Docs"
           description="Documentation and guides"
           relevance={1}
-        >
-          <p>Explore the documentation to get started.</p>
-        </FlexBlock>
+        />
         <FlexBlock
           title="Showcase"
           description="Examples and inspiration"

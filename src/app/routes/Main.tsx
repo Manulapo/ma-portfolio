@@ -17,11 +17,9 @@ const Main = () => {
         />
         <FlexBlock
           title="Blog"
-          description="Latest updates and news"
+          backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
           relevance={2}
-        >
-          <p>Read our latest blog posts.</p>
-        </FlexBlock>
+        />
         <FlexBlock
           title="Showcase"
           description="Examples and inspiration"
@@ -47,9 +45,7 @@ const Main = () => {
           title="Showcase"
           description="Examples and inspiration"
           relevance={1}
-        >
-          <p>Discover projects built with our tools.</p>
-        </FlexBlock>
+        />
       </GridBlock>
     </Section>
   );
