@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { sidebarIcon } from "../constants/icon";
+import { navbarLinks, sidebarIcon } from "../constants";
 import {
   Sidebar,
   SidebarContent,
@@ -8,14 +8,47 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "./ui/sidebar";
 
 const AppSidebar = () => {
+  const sidebarContext = useSidebar();
+
+  const handleLinkClick = () => {
+    sidebarContext.toggleSidebar();
+  }
+
   return (
     <Sidebar>
-      <div className="pt-20 pl-5 px-3 h-full">
+      {/* Side */}
+      <div className="pt-5 pl-5 px-3 mb-8 md:hidden">
         <SidebarHeader>
-          <h1 className="h2-bold text-2xl">About me</h1>
+          <h1 className="h2-bold text-2xl">Sections</h1>
+        </SidebarHeader>
+        <div className="border-t-1 my-4"></div>
+        <SidebarContent>
+          <SidebarMenu className="flex flex-col gap-4">
+            {Object.values(navbarLinks).map((values, index) => (
+              <SidebarMenuItem key={index}>
+                <SidebarMenuButton>
+                  <Link
+                    className="flex items-center gap-2"
+                    to={values.link}
+                    onClick={handleLinkClick}
+                  >
+                    <values.icon className="size-5 w-fit" />
+                    <p className="ml-1">{values.name}</p>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarContent>
+      </div>
+      {/* About me */}
+      <div className="pl-5 px-3 md:pt-20">
+        <SidebarHeader>
+          <h1 className="h2-bold text-2xl">Links</h1>
         </SidebarHeader>
         <div className="border-t-1 my-4"></div>
         <SidebarContent>
@@ -28,6 +61,7 @@ const AppSidebar = () => {
                     to={values.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLinkClick}
                   >
                     {typeof values.icon === "string" ? (
                       <img

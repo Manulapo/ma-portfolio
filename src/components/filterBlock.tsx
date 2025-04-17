@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ToolsUsedInterface } from "../../types";
-import { skillsObj } from "../constants/icon";
+import { skillsObj } from "../constants";
 import { cn } from "../lib/utils";
 import GridBlock from "./shared/blockgrid";
 import FlexBlock from "./shared/flexibleBlock";
@@ -43,11 +43,11 @@ const FilterBlocks = () => {
           </Button>
         ))}
       </div>
-      <GridBlock>
+      <GridBlock className="md:flex-nowrap flex-wrap">
         {Object.entries(skills).map(([key, tools]) =>
           tools.map((tool, index) => (
             <FlexBlock
-              className="flex items-center p-0"
+              className="flex p-0"
               key={`${key}-${index}`}
               relevance={1}
               height="quarter"

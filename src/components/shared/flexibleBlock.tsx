@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { blockColours } from "../../constants/colours";
+import { blockColours } from "../../constants/index";
 import { cn } from "../../lib/utils";
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { LucideProps } from "lucide-react";
 
 let lastColor: string | null = null;
 
@@ -34,6 +35,7 @@ const FlexBlock = ({
   backgroundImage,
   linkTo,
   backgroundColor = getColour(),
+  iconType,
   children,
 }: {
   relevance: number;
@@ -44,6 +46,9 @@ const FlexBlock = ({
   backgroundImage?: string;
   backgroundColor?: string;
   linkTo?: string;
+  iconType?: React.ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+  >;
   className?: string;
   children?: React.ReactNode;
 }) => {
@@ -75,6 +80,13 @@ const FlexBlock = ({
   const renderContent = useMemo(() => {
     return (
       <>
+        {iconType && (
+          <div className="h-6 w-6 absolute top-4 left-4">
+            {React.createElement(iconType, {
+              className: cn("h-full w-full", className),
+            })}
+          </div>
+        )}
         {(title || description) && (
           <div className="w-full h-fit flex flex-col gap-2 py-2">
             <CardHeader className="h-full flex flex-col justify-end gap-2">
@@ -113,17 +125,18 @@ const FlexBlock = ({
         )}
       </>
     );
-  }, [title, description, children]);
+  }, [title, description, children, backgroundImage, className, iconType]);
 
   return (
     <Card
       className={cn(
-        `shrink-0 bg-blue-100 min-w-[100px] p-4 py-6 flex flex-col items-start rounded-md flexblock`,
+        `min-w-[100px] p-4 py-6 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
         backgroundImage && "image justify-end",
+        iconType && "p-4 gap-0 relative",
         className
       )}
       style={{
-        width: dynamicWidth,
+        width: height !== "quarter" ? dynamicWidth : "",
         height: blockHeight,
         backgroundImage: backgroundImage
           ? `url('${backgroundImage}')`
@@ -136,7 +149,7 @@ const FlexBlock = ({
         <Link
           to={linkTo}
           className="w-full h-full flex flex-col justify-end"
-          style={{ textDecoration: "none" }} // Optional: Remove underline from the link
+          style={{ textDecoration: "none" }}
         >
           {renderContent}
         </Link>

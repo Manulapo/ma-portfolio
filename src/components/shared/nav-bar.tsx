@@ -1,25 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link, useLocation } from "react-router-dom";
 import { SidebarTrigger } from "../ui/sidebar";
-
-const navbarLinksObj = {
-  home: {
-    name: "Home",
-    link: "/",
-  },
-  about: {
-    name: "About",
-    link: "/about",
-  },
-  projects: {
-    name: "Projects",
-    link: "/projects",
-  },
-  skills: {
-    name: "Skills & Certifications",
-    link: "/skills",
-  },
-};
+import { navbarLinks } from "../../constants";
 
 const NavBar = () => {
   const location = useLocation(); // Get the current location object
@@ -32,8 +14,8 @@ const NavBar = () => {
       <div className="home-button bg-amber-400 h-full w-[60px] p-4 flex items-center justify-center">
         <SidebarTrigger className="cursor-pointer p-0 hover:bg-transparent hover:text-white hover:opacity-60" />
       </div>
-      <div className="flex gap-5">
-        {Object.entries(navbarLinksObj).map(([_, values]) => {
+      <div className="md:flex gap-5 hidden">
+        {Object.entries(navbarLinks).map(([_, values]) => {
           return (
             <Link
               key={values.name}
@@ -50,13 +32,11 @@ const NavBar = () => {
           );
         })}
       </div>
-      <div className="ml-auto pr-10 flex gap-4 items-center">
+      <div className="ml-auto md:pr-10 pr-5 flex gap-4 items-center">
         <p>Account</p>
         <Link to={"/about"}>
           <img
-            className="rounded-full"
-            width={40}
-            height={40}
+            className="rounded-full w-10"
             src="https://randomuser.me/api/portraits/women/8.jpg"
             alt="avatar"
           />

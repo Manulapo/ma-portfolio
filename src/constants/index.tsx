@@ -1,4 +1,15 @@
-import { File, Github, Linkedin, Mail, Navigation, Phone } from "lucide-react";
+import {
+  ChartArea,
+  File,
+  Github,
+  Home,
+  Linkedin,
+  Mail,
+  Navigation,
+  Phone,
+  Target,
+  User,
+} from "lucide-react";
 import { SidebarIconType, ToolsUsedInterface } from "../../types";
 
 export const attachmentSIcon = {
@@ -77,26 +88,60 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
 export const skillsObj: Record<string, ToolsUsedInterface[]> = {
   Data_Analisys: [
     {
-      name: "skill1",
+      name: "Typescript",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     },
     {
-      name: "skill2",
+      name: "GitHub",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     },
     {
-      name: "skill3",
+      name: "ReactJs",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     },
   ],
   Data_Visualization: [
     {
-      name: "skill4",
+      name: "Javascript",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
-      name: "skill5",
+      name: "MySql",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
   ],
 };
+
+export const navbarLinks = {
+  home: {
+    icon: Home,
+    name: "Home",
+    link: "/",
+  },
+  about: {
+    icon: User,
+    name: "About",
+    link: "/about",
+  },
+  projects: {
+    icon: Target,
+    name: "Projects",
+    link: "/projects",
+  },
+  skills: {
+    icon: ChartArea,
+    name: "Skills & Certifications",
+    link: "/skills",
+  },
+};
+
+export const blockColours = [
+  // "#FFB3BA", // Light Pink
+  // "#FFDFBA", // Light Peach
+  // "#FFFFBA", // Light Yellow
+  // "#BAFFC9", // Light Green
+  // "#BAE1FF", // Light Blue
+  // "#D5BAFF", // Light Purple
+  // "#FFC3A0", // Light Coral
+  "#fff",
+];

@@ -6,12 +6,14 @@ import Skills from "./Skills";
 
 const HomePage = () => {
   return (
-    <div className=" w-[90vw]">
+    <div className=" md:w-[90vw]">
       <Main />
       <About />
       <Projects />
       <Skills />
       <Certifications />
+      <div className="pl-5 text-muted-foreground opacity-50 text-xs">
+      2025 ©Chiara Coletta All rights reserved</div>
     </div>
   );
 };

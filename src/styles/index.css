@@ -124,12 +124,13 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transition: background-size 0.3s ease-in-out, opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   opacity: .8;
 }
 
 .flexblock:hover {
   opacity: 1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.10);
 }
 
 .flexblock.image:hover {
@@ -138,10 +139,9 @@
   opacity: 1;
 }
 
-/* Disable hover effects on mobile devices */
 @media (hover: none) {
   .flexblock {
-    background-size: 105%; /* Set the final hover state as default */
+    background-size: 105%; 
     background-position: center;
     opacity: 1;
   }

@@ -21,7 +21,7 @@ const ProjectDialog = ({
         {children}
       </DialogTrigger>
 
-      <DialogContent className="w-3/4 min-w-[90vw] h-[90vh] pt-6 pb-6 overflow-auto">
+      <DialogContent className="min-w-[90vw] h-[98vh] w-screen md:min-w-[90vw] md:h-[90vh] md:w-3/4 pt-6 pb-6 overflow-auto">
         <DialogHeader>
           <DialogTitle className="fixed">{project.title}</DialogTitle>
         </DialogHeader>

@@ -1,5 +1,5 @@
 import Project1 from "../components/projects/project-1";
-import { attachmentSIcon, toolsUsedIcon } from "./icon";
+import { attachmentSIcon, toolsUsedIcon } from ".";
 import { ProjectHeaderInterface } from "../../types";
 import Project2 from "../components/projects/project-2";
 const { react, redux, typescript } = toolsUsedIcon;

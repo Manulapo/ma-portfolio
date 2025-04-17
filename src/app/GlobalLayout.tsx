@@ -11,7 +11,7 @@ const GlobalLayout = () => {
           <NavBar /> 
           <div className="flex flex-1">
             <AppSidebar />
-            <main className="p-8 pt-25 overflow-hidden">
+            <main className="md:p-8 md:pt-25 p-3 pt-18 overflow-hidden">
               <Outlet />
             </main>
           </div>

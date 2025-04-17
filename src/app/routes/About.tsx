@@ -1,4 +1,6 @@
+import { File } from "lucide-react";
 import GridBlock from "../../components/shared/blockgrid";
+import Counter from "../../components/shared/counter";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Section from "../../components/shared/section";
 
@@ -20,6 +22,14 @@ const About = () => {
           relevance={4}
         >
           <p>Discover projects built with our tools.</p>
+        </FlexBlock>
+        <FlexBlock relevance={1} iconType={File}>
+          <Counter
+            time={100}
+            limit={26}
+            text="Giorni senza doccia"
+            className="text-red-500"
+          />
         </FlexBlock>
         <FlexBlock
           title="Showcase"

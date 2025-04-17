@@ -7,7 +7,7 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
       {/* Preview Image */}
       <img
         src={project.previewImage}
-        className="w-full object-cover object-center h-10 md:h-70 rounded"
+        className="w-full object-cover object-center h-40 md:h-70 rounded"
       />
       {/* Tools and Links */}
       <div className="w-full px-4 flex justify-between items-center">
