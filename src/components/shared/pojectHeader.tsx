@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import { ProjectHeaderInterface } from "../../../types";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
+  const isMobile = useIsMobile();
   return (
-    <section className="p-4">
+    <section className="md:p-4">
       {/* Preview Image */}
       <img
         src={project.previewImage}
         className="w-full object-cover object-center h-40 md:h-70 rounded"
       />
       {/* Tools and Links */}
-      <div className="w-full px-4 flex justify-between items-center md:flex-col md:items-start">
+      <div className="w-full md:px-4 flex flex-col md:flex-row justify-between items-start md:items-center mt-4">
         <div className="tools flex gap-4 mt-4 justify-start items-center">
           {project.tools?.map((toolRow, rowIndex) => (
             <div key={rowIndex} className="flex gap-2">
@@ -19,13 +21,13 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
                   key={`${rowIndex}-${index}`}
                   className="flex items-center gap-2 mt-2"
                 >
-                  <img src={tool.icon} alt={tool.name} width={30} height={30} />
+                  <img src={tool.icon} alt={tool.name} width={isMobile ? 20 : 30} height={isMobile ? 20 : 30} />
                 </div>
               ))}
             </div>
           ))}
         </div>
-        <div className="links mt-4 flex justify-end">
+        <div className="links mt-4 flex md:justify-end flex-wrap">
           {project.attachments?.map((attachment, attachmentIdx) => (
             <Link
               to={attachment.link}
