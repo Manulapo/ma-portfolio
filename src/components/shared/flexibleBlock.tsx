@@ -53,32 +53,15 @@ const FlexBlock = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
+  const isMobile = useIsMobile();
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
-  const standardHeight = 200;
+  const standardHeight = isMobile ? 170 : 200;
   const blockHeight =
     height === "full"
       ? standardHeight
       : height === "half"
       ? (standardHeight / 2).toString() + "px"
       : (standardHeight / 3.5).toString() + "px";
-
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    const calculateWidth = () => {
-      const screenWidth = window.innerWidth;
-      const formattedRelevance = relevance > 5 ? 5 : relevance;
-      const width = ((formattedRelevance + 1.5) / screenWidth) * 10000;
-      setDynamicWidth(`${width}%`);
-    };
-
-    calculateWidth();
-    window.addEventListener("resize", calculateWidth);
-
-    return () => {
-      window.removeEventListener("resize", calculateWidth);
-    };
-  }, [relevance]);
 
   const renderContent = useMemo(() => {
     return (
@@ -130,8 +113,39 @@ const FlexBlock = ({
     );
   }, [title, description, children, backgroundImage, className, iconType]);
 
+  const getBaseWidth = (
+    screenWidth: number,
+    relevance: number,
+    isMobile: boolean
+  ) => {
+    const standardizedRelevance = Math.min(relevance, 5); // Cap relevance at 5
+    const adjustedRelevance =
+      isMobile && relevance === 5
+        ? standardizedRelevance - 2.5
+        : standardizedRelevance;
+    const baseWidth = ((adjustedRelevance + 1.5) / screenWidth) * 10000;
+
+    return baseWidth;
+  };
+
+  useEffect(() => {
+    const calculateWidth = () => {
+      const screenWidth = window.innerWidth;
+      const width = getBaseWidth(screenWidth, relevance, isMobile);
+      setDynamicWidth(`${width}%`);
+    };
+
+    calculateWidth();
+    window.addEventListener("resize", calculateWidth);
+
+    return () => {
+      window.removeEventListener("resize", calculateWidth);
+    };
+  }, [relevance, isMobile]);
+
   return (
     <Card
+      key={dynamicWidth}
       className={cn(
         `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
         backgroundImage && "image justify-end",
@@ -139,9 +153,9 @@ const FlexBlock = ({
         className
       )}
       style={{
-        width: height === "full" ? dynamicWidth : "",
         height: blockHeight,
-        minWidth: isMobile && height === "full" ? dynamicWidth : "",
+        width: height === "full" ? dynamicWidth || "100%" : "",
+        minWidth: isMobile && height === "full" ? dynamicWidth || "100%" : "",
         backgroundImage: backgroundImage
           ? `url('${backgroundImage}')`
           : undefined,

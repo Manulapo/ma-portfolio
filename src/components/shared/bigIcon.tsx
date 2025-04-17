@@ -24,7 +24,7 @@ const BigIcon = ({
       )}
     >
       {React.createElement(iconType, {
-        className: cn("h-full w-full mb-3", tailwindAnimation, colour),
+        className: cn("size-20 md:h-full md:w-full mb-3", tailwindAnimation, colour),
       })}
       {text ?? (
         <p className="text-muted-foreground text-center text-sm font-medium">
