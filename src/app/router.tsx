@@ -3,7 +3,7 @@ import GlobalLayout from "./GlobalLayout";
 import About from "./routes/About";
 import HomePage from "./routes/Home";
 import Projects from "./routes/Projects-all";
-import CertificationsSkills from "./routes/cert-skill";
+import CertificationsSkills from "./routes/Cert-skill";
 import NotFoundPage from "./routes/notFound";
 
 const DashboardRoutes = () => {

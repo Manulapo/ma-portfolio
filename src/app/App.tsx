@@ -4,8 +4,8 @@ import DashboardRoutes from "./router";
 function App() {
   return (
     <>
-      <BrowserRouter>
-          <DashboardRoutes />
+      <BrowserRouter basename="/ma-portfolio">
+        <DashboardRoutes />
       </BrowserRouter>
     </>
   );

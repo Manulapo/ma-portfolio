@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://manulapo.github.io/ma-portfolio",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.7",
     "@radix-ui/react-separator": "^1.1.3",
