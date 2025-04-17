@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# 📊 MA-Portfolio – Marketing Analyst Interactive Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **MA-Portfolio**, an interactive and responsive **Marketing Analyst Portfolio Dashboard** built in the visual style of **Power BI**. This project showcases key marketing metrics through engaging visualizations, dynamic filters, and a clean, modern UI built with **React** and **TypeScript**.
 
-Currently, two official plugins are available:
+> 🔍 Designed to present insights, not just data – this portfolio turns numbers into stories.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎯 Project Objective
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To create a visually compelling and interactive dashboard that demonstrates marketing data analysis skills, front-end development expertise, and a deep understanding of data-driven storytelling. It simulates real-world business intelligence reports tailored for stakeholders and decision-makers.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** (with Hooks and functional components)
+- **TypeScript** (for strong typing and maintainability)
+- **Recharts** and **D3** (for beautiful, customizable charts)
+- **Tailwind CSS** (for fast and responsive UI styling)
+- **Framer Motion** (for smooth transitions and animations)
+- **React Context & Custom Hooks** (for state and filter management)
+- **Vite** (for fast bundling and development)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🖥️ Features
+
+- 📈 **Interactive Charts**: Line, bar, pie, and area charts with hover and click interactivity
+- 🧭 **Dynamic Filters**: Slice the data by region, channel, product category, or date range
+- 🧩 **Modular Widgets**: Reusable card components for KPIs and summary stats
+- 📱 **Fully Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- 🌙 **Dark/Light Mode Toggle**: User-friendly theme switching
+- 🔄 **Live Data Simulation**: Optional mode for fake real-time data refresh
+
