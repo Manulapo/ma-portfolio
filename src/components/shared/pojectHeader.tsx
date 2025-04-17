@@ -3,14 +3,14 @@ import { ProjectHeaderInterface } from "../../../types";
 
 const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
   return (
-    <section className="p-4">
+    <section className="p-4 md:p-2">
       {/* Preview Image */}
       <img
         src={project.previewImage}
         className="w-full object-cover object-center h-40 md:h-70 rounded"
       />
       {/* Tools and Links */}
-      <div className="w-full px-4 flex justify-between items-center">
+      <div className="w-full px-4 flex justify-between items-center md:flex-col md:items-start">
         <div className="tools flex gap-4 mt-4 justify-start items-center">
           {project.tools?.map((toolRow, rowIndex) => (
             <div key={rowIndex} className="flex gap-2">
