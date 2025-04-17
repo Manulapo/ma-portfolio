@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import { LucideProps } from "lucide-react";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 let lastColor: string | null = null;
 
@@ -60,6 +61,8 @@ const FlexBlock = ({
       : height === "half"
       ? (standardHeight / 2).toString() + "px"
       : (standardHeight / 3.5).toString() + "px";
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -130,19 +133,21 @@ const FlexBlock = ({
   return (
     <Card
       className={cn(
-        `min-w-[100px] p-4 py-6 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
+        `p-4 py-6 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
         backgroundImage && "image justify-end",
         iconType && "p-4 gap-0 relative",
         className
       )}
       style={{
-        width: height !== "quarter" ? dynamicWidth : "",
+        width: height === "full" ? dynamicWidth : "",
         height: blockHeight,
+        minWidth: isMobile && height === "full" ? dynamicWidth : "",
         backgroundImage: backgroundImage
           ? `url('${backgroundImage}')`
           : undefined,
-        backgroundColor:
-          backgroundColor && !backgroundImage ? backgroundColor : undefined,
+        backgroundColor: backgroundImage
+          ? undefined
+          : backgroundColor || undefined,
       }}
     >
       {linkTo ? (
