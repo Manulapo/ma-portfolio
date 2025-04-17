@@ -16,7 +16,7 @@ const AppSidebar = () => {
 
   const handleLinkClick = () => {
     sidebarContext.toggleSidebar();
-  }
+  };
 
   return (
     <Sidebar>
@@ -81,7 +81,12 @@ const AppSidebar = () => {
         </SidebarContent>
       </div>
       <SidebarFooter className="mt-auto py-4 pl-5 text-muted-foreground opacity-50 text-xs">
-        2025 ©Chiara Coletta All rights reserved
+        <div className="text-muted-foreground opacity-50 text-xs">
+          2025 ©Chiara Coletta All rights reserved
+        </div>
+        <div className="text-muted-foreground opacity-50 text-xs">
+          Produced by @La Porta Manuel
+        </div>
       </SidebarFooter>
     </Sidebar>
   );

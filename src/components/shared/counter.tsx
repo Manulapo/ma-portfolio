@@ -5,11 +5,13 @@ const Counter = ({
   time = 100,
   limit,
   text,
+  counterText,
   className,
 }: {
   time: number;
   limit: number;
   text?: string;
+  counterText?: string;
   className?: string;
 }) => {
   const [count, setCount] = useState(0);
@@ -26,7 +28,8 @@ const Counter = ({
 
   return (
     <div className="p-3 flex flex-col items-center justify-center h-full w-full">
-      <div className={cn("text-7xl h-20 flex items-end", className)}>
+      <div className={cn("text-7xl h-20 flex items-center", className)}>
+        <span className="text-5xl">{counterText}</span>
         {count}
       </div>
       <div className="mt-4 text-nowrap">{text}</div>

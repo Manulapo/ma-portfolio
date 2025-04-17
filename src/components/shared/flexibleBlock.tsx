@@ -91,7 +91,7 @@ const FlexBlock = ({
           </div>
         )}
         {(title || description) && (
-          <div className="w-full h-fit flex flex-col gap-2 py-2">
+          <div className="w-full h-fit flex flex-col gap-2">
             <CardHeader className="h-full flex flex-col justify-end gap-2">
               {title && (
                 <CardTitle>
@@ -133,7 +133,7 @@ const FlexBlock = ({
   return (
     <Card
       className={cn(
-        `p-4 py-6 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
+        `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
         backgroundImage && "image justify-end",
         iconType && "p-4 gap-0 relative",
         className

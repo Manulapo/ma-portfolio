@@ -33,7 +33,7 @@ const NavBar = () => {
         })}
       </div>
       <div className="ml-auto md:pr-10 pr-5 flex gap-4 items-center">
-        <p>Account</p>
+        <p>Welcome!</p>
         <Link to={"/about"}>
           <img
             className="rounded-full w-10"

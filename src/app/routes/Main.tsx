@@ -1,10 +1,12 @@
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BarChartComponent } from "../../components/charts/BarChart";
 import BigIcon from "../../components/shared/bigIcon";
 import GridBlock from "../../components/shared/blockgrid";
+import Counter from "../../components/shared/counter";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Section from "../../components/shared/section";
-import Counter from "../../components/shared/counter";
+import { PieChartComponent } from "../../components/charts/pieChart";
 
 const Main = () => {
   return (
@@ -15,13 +17,21 @@ const Main = () => {
     >
       <GridBlock>
         <FlexBlock
-          title="Docs"
-          description="Documentation and guides"
-          relevance={1}
-        />
-        <FlexBlock
-          relevance={1}
+          title="Showcase"
+          description="Examples and inspiration"
+          relevance={2}
         >
+          <p>Discover projects built with our tools.</p>
+        </FlexBlock>
+        <FlexBlock relevance={2}>
+          <PieChartComponent />
+        </FlexBlock>
+        <FlexBlock relevance={2} className="p-0 w-0">
+          <div style={{ width: "100%" }}>
+            <BarChartComponent />
+          </div>
+        </FlexBlock>
+        <FlexBlock relevance={1}>
           <Counter time={150} limit={4} text="Anni di esperienza" />
         </FlexBlock>
         <FlexBlock
