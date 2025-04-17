@@ -3,7 +3,7 @@ import { ProjectHeaderInterface } from "../../../types";
 
 const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
   return (
-    <section className="p-4 md:p-2">
+    <section className="p-4">
       {/* Preview Image */}
       <img
         src={project.previewImage}
