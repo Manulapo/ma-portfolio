@@ -1,26 +1,30 @@
 import { cn } from "../../lib/utils";
 
-const Project1 = ({ className }: { className?: string }) => {
+import dashboard1 from "@/assets/images/p1/dashboard_p1.png";
+import dashboard2 from "@/assets/images/p1/dashboard_p2.png";
+import dashboard3 from "@/assets/images/p1/dashboard_p3.png";
 
+import CarouselLayout from "../shared/carousel-layout";
+import { Separator } from "../ui/separator";
+
+
+const Project1 = ({ className }: { className?: string }) => {
   return (
     <div className={cn("space-y-8 p-4 text-gray-800", className)}>
       <div className="gap-6 items-center">
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold w-full">
-            Office Supplies Analysis from 2020 to 2023
-          </h3>
           <p className="text-muted-foreground">
             When I tackled this advanced Tableau tutorial, I chose not merely to
             replicate the exercises but to craft a truly personalized
-            dashboard—one I could turn to every day to extract the answers I
+            dashboard one I could turn to every day to extract the answers I
             needed about sales and customers.
           </p>
-          <h3 className="text-xl font-semibold">Project Scope</h3>
+          <h3 className="text-xl font-semibold">🗂️ Project Scope</h3>
           <p>
             <ul className="text-muted-foreground pl-4">
               <li>
                 <span className="font-semibold text-gray-700">
-                  Sales Dashboard:
+                  Sales Dashboard:{" "}
                 </span>
                 Weekly and monthly trend analysis; profit, sales, and quantity
                 sold year-over-year (2020–2023); deep dive into product
@@ -36,7 +40,7 @@ const Project1 = ({ className }: { className?: string }) => {
             </ul>
           </p>
 
-          <h3 className="text-xl font-semibold">Main Insights</h3>
+          <h3 className="text-xl font-semibold">💡 Main Insights</h3>
           <p>
             <ul className="text-muted-foreground pl-4">
               <li>
@@ -50,7 +54,7 @@ const Project1 = ({ className }: { className?: string }) => {
                 <span className="font-semibold text-gray-700">
                   Top Performers:{" "}
                 </span>
-                The Technology category—especially Phones and Copiers—delivers
+                The Technology category especially Phones and Copiers delivers
                 the greatest profitability.
               </li>
               <li>
@@ -70,7 +74,7 @@ const Project1 = ({ className }: { className?: string }) => {
             </ul>
           </p>
 
-          <h3 className="text-xl font-semibold">What I Learned</h3>
+          <h3 className="text-xl font-semibold">🎓 What I Learned</h3>
           <p>
             <ul className="text-muted-foreground pl-4">
               <li>
@@ -89,8 +93,13 @@ const Project1 = ({ className }: { className?: string }) => {
           </p>
         </div>
       </div>
-
-      
+      <Separator className="mb-6 w-[90%] mx-auto" orientation="horizontal" />
+      <CarouselLayout
+        slidesArray={[dashboard1, dashboard2, dashboard3]}
+        title="Dashboard"
+        toLink="
+          https://public.tableau.com/app/profile/chiara.coletta/viz/Salesdasboard_17457497302050/CustomersDashboard?publish=yes"
+      />
     </div>
   );
 };

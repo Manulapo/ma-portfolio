@@ -16,14 +16,17 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
         <div className="tools flex gap-4 mt-4 justify-start items-center">
           {project.tools?.map((toolRow, rowIndex) => (
             <div key={rowIndex} className="flex gap-2">
-              {toolRow.map((tool, index) => (
-                <div
-                  key={`${rowIndex}-${index}`}
-                  className="flex items-center gap-2 mt-2"
-                >
-                  <img src={tool.icon} alt={tool.name} width={isMobile ? 20 : 40} height={isMobile ? 20 : 0} />
-                </div>
-              ))}
+              <div
+                key={`${rowIndex}-${rowIndex}`}
+                className="flex items-center gap-2 mt-2"
+              >
+                <img
+                  src={toolRow.icon}
+                  alt={toolRow.name}
+                  width={isMobile ? 20 : 40}
+                  height={isMobile ? 20 : 0}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -49,7 +52,7 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
       </div>
       {/* Header */}
       <div className="mt-10 mb-5">
-        <h2 className="text-3xl mb-4 font-bold text-blue-800">
+        <h2 className="text-3xl mb-4 font-bold text-blue-900">
           {project.title}
         </h2>
         <p className="text-sm text-gray-500 mt-1">{project.description}</p>

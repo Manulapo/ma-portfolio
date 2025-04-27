@@ -40,36 +40,26 @@ export const attachmentSIcon = {
 };
 
 export const toolsUsedIcon = {
-  powerBi: [
-    {
-      name: "Power BI",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg",
-    },
-  ],
-  tableau: [
-    {
-      name: "Tableau",
-      icon: tableauIcon,
-    },
-  ],
-  excel: [
-    {
-      name: "Excel",
-      icon: excelIcon,
-    },
-  ],
-  python: [
-    {
-      name: "Python",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    },
-  ],
-  mySql: [
-    {
-      name: "MySQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-  ],
+  powerBi: {
+    name: "Power BI",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg",
+  },
+  tableau: {
+    name: "Tableau",
+    icon: tableauIcon,
+  },
+  excel: {
+    name: "Excel",
+    icon: excelIcon,
+  },
+  python: {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  mySql: {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
 };
 
 export const sidebarIcon: Record<string, SidebarIconType> = {

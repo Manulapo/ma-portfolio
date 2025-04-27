@@ -9,7 +9,7 @@ export interface ProjectHeaderInterface {
   description: string;
   triggerLabel: string;
   previewImage: string;
-  tools: ToolsUsedInterface[][];
+  tools: ToolsUsedInterface[];
   attachments: AttachmentInterface[];
   relevantLink?: string;
 }

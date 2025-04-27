@@ -1,10 +1,11 @@
-import { Atom, Database, Download, FileText } from "lucide-react";
+import { Atom, Download, FileText } from "lucide-react";
 import BigIcon from "../../components/shared/bigIcon";
 import GridBlock from "../../components/shared/blockgrid";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Heading from "../../components/shared/heading";
 import ProjectDialog from "../../components/shared/projectDialog";
 import { project1, project2 } from "../../constants/projects";
+import { toolsUsedIcon } from "@/constants";
 
 const Projects = () => {
   return (
@@ -26,7 +27,11 @@ const Projects = () => {
           </ProjectDialog>
         </FlexBlock>
         <FlexBlock linkTo={project1.relevantLink} relevance={1}>
-          <BigIcon iconType={Database} text={"Live Dashboard"} colour="text-amber-400"/>
+          <BigIcon
+            iconType={toolsUsedIcon.tableau.icon}
+            text={"Live Dashboard"}
+            colour="text-amber-400"
+          />
         </FlexBlock>
       </GridBlock>
       {/* Project 2 */}
@@ -49,7 +54,11 @@ const Projects = () => {
           </ProjectDialog>
         </FlexBlock>
         <FlexBlock relevance={1}>
-          <BigIcon iconType={Download} text={"Download Pdf"} colour="text-emerald-400"/>
+          <BigIcon
+            iconType={Download}
+            text={"Download Pdf"}
+            colour="text-emerald-400"
+          />
         </FlexBlock>
       </GridBlock>
     </div>
