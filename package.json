@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "build": "npm exec tsc -- -b && npm exec vite -- build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm exec gh-pages -- -d dist"
   },
   "homepage": "https://manulapo.github.io/ma-portfolio",
   "dependencies": {
