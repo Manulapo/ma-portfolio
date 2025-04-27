@@ -11,6 +11,10 @@ import {
   User,
 } from "lucide-react";
 import { SidebarIconType, ToolsUsedInterface } from "../../types";
+import excelIcon from "@/assets/icons/excel-icon.png";
+import excelIconBW from "@/assets/icons/bw/excel-icon.png";
+import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
+import tableauIcon from "@/assets/icons/tableau-icon.png";
 
 export const attachmentSIcon = {
   pdf: {
@@ -21,33 +25,49 @@ export const attachmentSIcon = {
     name: "GitHub",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
-  powerBi: {
+  powerBiDS: {
     name: "Go to Dashboard",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  tableauDS: {
+    name: "Go to Dashboard",
+    icon: tableauIconBW,
+  },
+  excel: {
+    name: "Excel",
+    icon: excelIconBW,
   },
 };
 
 export const toolsUsedIcon = {
-  react: [
+  powerBi: [
     {
-      name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "React Router",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
+      name: "Power BI",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg",
     },
   ],
-  redux: [
+  tableau: [
     {
-      name: "Redux",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      name: "Tableau",
+      icon: tableauIcon,
     },
   ],
-  typescript: [
+  excel: [
     {
-      name: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      name: "Excel",
+      icon: excelIcon,
+    },
+  ],
+  python: [
+    {
+      name: "Python",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    },
+  ],
+  mySql: [
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
   ],
 };

@@ -1,30 +1,23 @@
-import Project1 from "../components/projects/project-1";
+import project1Preview from "@/assets/images/p1/Project1_preview.jpg";
 import { attachmentSIcon, toolsUsedIcon } from ".";
 import { ProjectHeaderInterface } from "../../types";
+import Project1 from "../components/projects/project-1";
 import Project2 from "../components/projects/project-2";
-const { react, redux, typescript } = toolsUsedIcon;
-const { pdf, github, powerBi } = attachmentSIcon;
+const { excel, tableau } = toolsUsedIcon;
+const { pdf, powerBiDS,tableauDS } = attachmentSIcon;
 
 export const project1: ProjectHeaderInterface = {
   contentComponent: Project1,
-  title: "Project 1",
-  description: "This is a description of project 1",
-  triggerLabel: "Cliccami per il project 1",
-  previewImage:
-    "https://townsquare.media/site/442/files/2013/11/lego-movie-posters-lead-photo.jpg?w=780&q=75",
-  tools: [react, redux, typescript],
+  title: "Office Supplies Analysis",
+  description: "Analyzed 2020–2023 sales and customer transactions in Tableau to uncover weekly/monthly trends, product‐category performance, and customer segments. Key findings include consistent year‐end sales peaks, Technology (especially Phones and Copiers) driving the most profit, a 20.4 % year-over-year sales increase, and low repeat‐purchase rates—insights that inform optimal promotion timing and retention strategies.",
+  triggerLabel: "Office Supplies Analysis",
+  previewImage: project1Preview,
+  tools: [excel, tableau],
+  relevantLink: "https://public.tableau.com/app/profile/chiara.coletta/viz/Salesdasboard_17457497302050/CustomersDashboard?publish=yes",
   attachments: [
     {
-      type: pdf,
-      link: "https://www.test.com",
-    },
-    {
-      type: github,
-      link: "https://www.test.com",
-    },
-    {
-      type: powerBi,
-      link: "https://www.test.com",
+      type: tableauDS,
+      link: "https://public.tableau.com/app/profile/chiara.coletta/viz/Salesdasboard_17457497302050/CustomersDashboard?publish=yes",
     },
   ],
 };
@@ -36,14 +29,14 @@ export const project2: ProjectHeaderInterface = {
   triggerLabel: "Cliccami per il project 2",
   previewImage:
     "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
-  tools: [react, redux, typescript],
+  tools: [excel, tableau],
   attachments: [
     {
       type: pdf,
       link: "https://www.test.com",
     },
     {
-      type: { ...powerBi, name: "Power BI" },
+      type: { ...powerBiDS, name: "Power BI" },
       link: "https://www.test.com",
     },
   ],

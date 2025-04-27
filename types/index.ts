@@ -11,6 +11,7 @@ export interface ProjectHeaderInterface {
   previewImage: string;
   tools: ToolsUsedInterface[][];
   attachments: AttachmentInterface[];
+  relevantLink?: string;
 }
 
 export interface ToolsUsedInterface {

@@ -21,7 +21,7 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
                   key={`${rowIndex}-${index}`}
                   className="flex items-center gap-2 mt-2"
                 >
-                  <img src={tool.icon} alt={tool.name} width={isMobile ? 20 : 30} height={isMobile ? 20 : 30} />
+                  <img src={tool.icon} alt={tool.name} width={isMobile ? 20 : 40} height={isMobile ? 20 : 0} />
                 </div>
               ))}
             </div>

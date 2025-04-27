@@ -16,7 +16,7 @@ const Projects = () => {
       {/* Project 1 */}
       <GridBlock>
         <FlexBlock
-          title="Lego Project"
+          title={project1.title}
           backgroundImage={project1.previewImage}
           relevance={5}
         />
@@ -25,7 +25,7 @@ const Projects = () => {
             <BigIcon iconType={FileText} text={"Go to Project"} />
           </ProjectDialog>
         </FlexBlock>
-        <FlexBlock relevance={1}>
+        <FlexBlock linkTo={project1.relevantLink} relevance={1}>
           <BigIcon iconType={Database} text={"Live Dashboard"} colour="text-amber-400"/>
         </FlexBlock>
       </GridBlock>

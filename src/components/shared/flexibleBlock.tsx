@@ -169,6 +169,7 @@ const FlexBlock = ({
           to={linkTo}
           className="w-full h-full flex flex-col justify-end"
           style={{ textDecoration: "none" }}
+          target="_blank"
         >
           {renderContent}
         </Link>
