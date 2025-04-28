@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 const CarouselLayout = ({
   slidesArray,
@@ -16,7 +17,8 @@ const CarouselLayout = ({
   title: string;
   toLink?: string;
 }) => {
-  const itemBasis = slidesArray.length > 1 ? "basis-2/3" : "basis-full";
+  const isMobile = useIsMobile();
+  const itemBasis = !isMobile ? slidesArray.length > 1 ? "basis-2/3" : "basis-full": "basis-full";
 
   return (
     <div className="px-5">

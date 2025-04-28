@@ -2,6 +2,7 @@
   "name": "ma-portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://manulapo.github.io/ma-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "npm exec gh-pages -- -d dist"
   },
-  "homepage": "https://manulapo.github.io/ma-portfolio",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.7",
     "@radix-ui/react-separator": "^1.1.3",

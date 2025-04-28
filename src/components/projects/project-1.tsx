@@ -7,7 +7,6 @@ import dashboard3 from "@/assets/images/p1/dashboard_p3.png";
 import CarouselLayout from "../shared/carousel-layout";
 import { Separator } from "../ui/separator";
 
-
 const Project1 = ({ className }: { className?: string }) => {
   return (
     <div className={cn("space-y-8 p-4 text-gray-800", className)}>
@@ -15,9 +14,9 @@ const Project1 = ({ className }: { className?: string }) => {
         <div className="space-y-4">
           <p className="text-muted-foreground">
             When I tackled this advanced Tableau tutorial, I chose not merely to
-            replicate the exercises but to craft a truly personalized
-            dashboard one I could turn to every day to extract the answers I
-            needed about sales and customers.
+            replicate the exercises but to craft a truly personalized dashboard
+            one I could turn to every day to extract the answers I needed about
+            sales and customers.
           </p>
           <h3 className="text-xl font-semibold">🗂️ Project Scope</h3>
           <p>
@@ -95,11 +94,15 @@ const Project1 = ({ className }: { className?: string }) => {
       </div>
       <Separator className="mb-6 w-[90%] mx-auto" orientation="horizontal" />
       <CarouselLayout
-        slidesArray={[dashboard1, dashboard2, dashboard3]}
+        slidesArray={[dashboard2, dashboard1, dashboard3]}
         title="Dashboard"
         toLink="
           https://public.tableau.com/app/profile/chiara.coletta/viz/Salesdasboard_17457497302050/CustomersDashboard?publish=yes"
       />
+
+      <p className="text-muted-foreground my-3">
+        Dahboard design was inspired by Baraa Khatib lil Salkini's work
+      </p>
     </div>
   );
 };

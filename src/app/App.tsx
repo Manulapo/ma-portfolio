@@ -1,12 +1,12 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import DashboardRoutes from "./router";
 
 function App() {
   return (
     <>
-      <BrowserRouter basename="/ma-portfolio">
+      <HashRouter >
         <DashboardRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

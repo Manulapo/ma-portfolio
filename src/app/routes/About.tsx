@@ -27,7 +27,7 @@ const About = () => {
           <Counter
             time={100}
             limit={26}
-            text="Giorni senza doccia"
+            text="Case Studies"
             className="text-red-500"
           />
         </FlexBlock>
