@@ -8,8 +8,8 @@ import Project2 from "../components/projects/project-2";
 const { excel, tableau, mySql, powePoint } = toolsUsedIcon;
 const { pdf, tableauDS } = attachmentSIcon;
 
-const legoProjectPdf = `/files/PDF/LEGOTrendANALYSIS.pdf`;
-const legoProjectSQL = `/files/sql/Lego_set_analysis.sql`;
+const legoProjectPdf = `${window.location.origin}/files/PDF/LEGOTrendANALYSIS.pdf`;
+const legoProjectSQL = `${window.location.origin}/files/sql/Lego_set_analysis.sql`;
 
 export const project1: ProjectHeaderInterface = {
   contentComponent: Project1,
@@ -45,7 +45,7 @@ export const project2: ProjectHeaderInterface = {
       link: "https://public.tableau.com/views/LegoProject_17472965432290/LEGOSetsOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     },
     {
-      type: {...pdf,name: "Download Deck "},
+      type: {...pdf,name: "Download Deck"},
       link: legoProjectPdf,
     },
     {
