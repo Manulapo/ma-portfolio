@@ -16,11 +16,12 @@ import powerpointIcon from "@/assets/icons/power-point-icon.png";
 import excelIconBW from "@/assets/icons/bw/excel-icon.png";
 import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
 import tableauIcon from "@/assets/icons/tableau-icon.png";
+import powerBiIcon from "@/assets/icons/power-bi-icon.png";
 
 export const attachmentSIcon = {
   pdf: {
     name: "PDF",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/readthedocs/readthedocs-original.svg",
   },
   github: {
     name: "GitHub",
@@ -107,26 +108,23 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
 export const skillsObj: Record<string, ToolsUsedInterface[]> = {
   Data_Analisys: [
     {
-      name: "Typescript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      name: "MySql",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
-      name: "GitHub",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      name: "Python",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     },
-    {
-      name: "ReactJs",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
+    { name: "Excel", icon: excelIcon },
   ],
   Data_Visualization: [
     {
-      name: "Javascript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      name: "Tableau",
+      icon: tableauIcon,
     },
     {
-      name: "MySql",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      name: "Power BI",
+      icon: powerBiIcon,
     },
   ],
 };

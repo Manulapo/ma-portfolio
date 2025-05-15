@@ -3,6 +3,7 @@ import GridBlock from "../../components/shared/blockgrid";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Section from "../../components/shared/section";
 import FilterBlocks from "../../components/filterBlock";
+import { certifications } from "@/constants/certifications";
 
 const CertificationsSkills = () => {
   return (
@@ -18,76 +19,41 @@ const CertificationsSkills = () => {
         description="Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet"
       >
         <GridBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
-          <FlexBlock relevance={2}>
-            <div className="flex text-nowrap gap-4">
-              <Award />
-              <p className="font-semibold text-black">Certification Name</p>
-            </div>
-            <p className="mt-5 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              molestiae placeat temporibus minima, maxime inventore.
-            </p>
-          </FlexBlock>
+          {certifications.map((certification, index) => (
+            <FlexBlock
+              className="relative"
+              relevance={2}
+              key={index}
+              downloadLink={certification.link}
+            >
+              <div className="flex flex-col gap-2 relative">
+                <div className="flex gap-4">
+                  {certification.image ? (
+                    <img
+                      src={certification.image}
+                      alt="certification issued by"
+                      className="absolute top-0 right-[-1em] opacity-20 w-20"
+                    />
+                  ) : (
+                    <Award
+                      size={50}
+                      className="absolute top-0 right-0 opacity-10"
+                    />
+                  )}
+                  <p className="font-semibold text-black leading-4.5">
+                    {certification.name}
+                  </p>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {certification.issuedBy}
+                </p>
+              </div>
+              <p className="mt-5 text-sm">{certification.description}</p>
+              <p className="text-xs text-muted-foreground absolute bottom-6 right-6">
+                {certification.date}
+              </p>
+            </FlexBlock>
+          ))}
         </GridBlock>
       </Section>
     </div>

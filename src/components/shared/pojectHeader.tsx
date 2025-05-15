@@ -37,11 +37,11 @@ const ProjectHeader = ({ project }: { project: ProjectHeaderInterface }) => {
               target="_blank"
               rel="noopener noreferrer"
               key={attachmentIdx}
-              className="flex items-center gap-2 mt-2 mr-1 cursor-pointer rounded-full border p-2 pr-4 w-fit group"
+              className="flex items-center gap-2 mt-2 mr-1 cursor-pointer rounded-full border p-2 pr-4 w-fit group "
             >
               <img
                 src={attachment.type.icon}
-                className="w-5 inline-block md:opacity-70 group-hover:opacity-100 transition duration-300 ease-in-out"
+                className="w-5 inline-block md:opacity-70 group-hover:opacity-100 transition duration-300 ease-in-out grayscale"
               />
               <p className="text-sm text-gray-500 text-nowrap group-hover:text-blue-400 transition duration-300 ease-in-out">
                 {attachment.type.name}
