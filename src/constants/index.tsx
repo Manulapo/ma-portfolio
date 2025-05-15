@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { SidebarIconType, ToolsUsedInterface } from "../../types";
 import excelIcon from "@/assets/icons/excel-icon.png";
+import powerpointIcon from "@/assets/icons/power-point-icon.svg";
 import excelIconBW from "@/assets/icons/bw/excel-icon.png";
 import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
 import tableauIcon from "@/assets/icons/tableau-icon.png";
@@ -37,6 +38,10 @@ export const attachmentSIcon = {
     name: "Excel",
     icon: excelIconBW,
   },
+  mySql: {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
 };
 
 export const toolsUsedIcon = {
@@ -59,6 +64,10 @@ export const toolsUsedIcon = {
   mySql: {
     name: "MySQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  powePoint: {
+    name: "PowerPoint",
+    icon: powerpointIcon,
   },
 };
 

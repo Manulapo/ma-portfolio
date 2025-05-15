@@ -7,7 +7,6 @@ import ProjectDialog from "../../components/shared/projectDialog";
 import { project1, project2 } from "../../constants/projects";
 import { toolsUsedIcon } from "@/constants";
 
-const legoProjectPdf = `/PDF/LEGOTrendANALYSIS.pdf`;
 
 const Projects = () => {
   return (
@@ -55,7 +54,7 @@ const Projects = () => {
             <BigIcon iconType={Atom} text={"Go to Project"} />
           </ProjectDialog>
         </FlexBlock>
-        <FlexBlock relevance={1} downloadLink={legoProjectPdf}>
+        <FlexBlock relevance={1} downloadLink={project2.attachments[1].link}>
           <BigIcon
             iconType={Download}
             text={"Download Pdf"}

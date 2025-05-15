@@ -1,8 +1,8 @@
 import { cn } from "../../lib/utils";
 
-// import lego1 from "@/assets/images/p2/lego_p1.png";
-// import lego2 from "@/assets/images/p2/lego_p2.png";
-// import lego3 from "@/assets/images/p2/lego_p3.png";
+import dashboard_p1 from "@/assets/images/p2/dashboard_p1.png";
+import dashboard_p2 from "@/assets/images/p2/dashboard_p2.png";
+
 
 import CarouselLayout from "../shared/carousel-layout";
 import { Separator } from "../ui/separator";
@@ -12,7 +12,7 @@ const Project2 = ({ className }: { className?: string }) => {
     <div className={cn("space-y-8 p-4 text-gray-800", className)}>
       <div className="space-y-4">
         <p className="text-muted-foreground">
-          This end-to-end LEGO® Analytics Project leverages a Maven Analytics dataset from 1970 to
+          This end-to-end LEGO Analytics Project leverages a Maven Analytics dataset from 1970 to
           2022. Using SQL, Excel, Tableau Public, and PowerPoint, I simulated a full-cycle analytics
           workflow — from data cleaning to executive storytelling.
         </p>
@@ -20,7 +20,7 @@ const Project2 = ({ className }: { className?: string }) => {
         <h3 className="text-xl font-semibold">🗂️ Project Scope</h3>
         <ul className="text-muted-foreground pl-4">
           <li>
-            <span className="font-semibold text-gray-700">Dataset:</span> Maven Analytics LEGO® sets (1970–2022)
+            <span className="font-semibold text-gray-700">Dataset:</span> Maven Analytics LEGO sets (1970–2022)
           </li>
           <li>
             <span className="font-semibold text-gray-700">Tools Used:</span> SQL, Excel, Tableau Public, PowerPoint
@@ -70,14 +70,10 @@ const Project2 = ({ className }: { className?: string }) => {
       <Separator className="mb-6 w-[90%] mx-auto" orientation="horizontal" />
 
       <CarouselLayout
-        slidesArray={[]}
-        title="LEGO® Analytics Dashboard"
+        slidesArray={[dashboard_p1, dashboard_p2]}
+        title="LEGO Analytics Dashboard"
         toLink="https://public.tableau.com/app/profile/your.profile/viz/LEGOAnalyticsDashboard/Overview?publish=yes"
       />
-
-      <p className="text-muted-foreground my-3">
-        Dashboard visuals and storytelling were inspired by real-world analytics best practices.
-      </p>
     </div>
   );
 };
