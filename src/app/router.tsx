@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import GlobalLayout from "./GlobalLayout";
 import About from "./routes/About";
 import HomePage from "./routes/Home";
@@ -7,9 +7,10 @@ import CertificationsSkills from "./routes/Cert-skill";
 import NotFoundPage from "./routes/notFound";
 
 const DashboardRoutes = () => {
+  const location = useLocation();
+
   return (
-    <>
-      <Routes>
+      <Routes location={location}>
         <Route path="/" element={<GlobalLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/about" element={<About />} />
@@ -18,7 +19,6 @@ const DashboardRoutes = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </>
   );
 };
 
