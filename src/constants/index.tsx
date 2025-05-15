@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { SidebarIconType, ToolsUsedInterface } from "../../types";
 import excelIcon from "@/assets/icons/excel-icon.png";
-import powerpointIcon from "@/assets/icons/power-point-icon.svg";
+import powerpointIcon from "@/assets/icons/power-point-icon.png";
 import excelIconBW from "@/assets/icons/bw/excel-icon.png";
 import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
 import tableauIcon from "@/assets/icons/tableau-icon.png";
