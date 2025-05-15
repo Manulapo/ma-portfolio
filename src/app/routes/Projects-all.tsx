@@ -7,6 +7,8 @@ import ProjectDialog from "../../components/shared/projectDialog";
 import { project1, project2 } from "../../constants/projects";
 import { toolsUsedIcon } from "@/constants";
 
+const legoProjectPdf = `public/PDF/LEGOTrendANALYSIS.pdf`;
+
 const Projects = () => {
   return (
     <div className="mb-20">
@@ -44,7 +46,7 @@ const Projects = () => {
           <p>Explore the documentation to get started.</p>
         </FlexBlock>
         <FlexBlock
-          title="Restaurant Project"
+          title={project2.title}
           backgroundImage={project2.previewImage}
           relevance={5}
         />
@@ -53,11 +55,18 @@ const Projects = () => {
             <BigIcon iconType={Atom} text={"Go to Project"} />
           </ProjectDialog>
         </FlexBlock>
-        <FlexBlock relevance={1}>
+        <FlexBlock relevance={1} downloadLink={legoProjectPdf}>
           <BigIcon
             iconType={Download}
             text={"Download Pdf"}
             colour="text-emerald-400"
+          />
+        </FlexBlock>
+        <FlexBlock linkTo={project2.relevantLink} relevance={1}>
+          <BigIcon
+            iconType={toolsUsedIcon.tableau.icon}
+            text={"Live Dashboard"}
+            colour="text-amber-400"
           />
         </FlexBlock>
       </GridBlock>

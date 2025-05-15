@@ -35,6 +35,7 @@ const FlexBlock = ({
   height = "full",
   backgroundImage,
   linkTo,
+  downloadLink,
   backgroundColor = getColour(),
   iconType,
   children,
@@ -47,6 +48,7 @@ const FlexBlock = ({
   backgroundImage?: string;
   backgroundColor?: string;
   linkTo?: string;
+  downloadLink?: string;
   iconType?: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
   >;
@@ -173,6 +175,10 @@ const FlexBlock = ({
         >
           {renderContent}
         </Link>
+      ) : downloadLink ? (
+        <a href={downloadLink} target="_blank" rel="noopener noreferrer">
+          {renderContent}
+        </a>
       ) : (
         renderContent
       )}

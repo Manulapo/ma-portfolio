@@ -1,10 +1,11 @@
 import project1Preview from "@/assets/images/p1/Project1_preview.jpg";
+import project2Preview from "@/assets/images/p2/Project2_preview.jpg";
 import { attachmentSIcon, toolsUsedIcon } from ".";
 import { ProjectHeaderInterface } from "../../types";
 import Project1 from "../components/projects/project-1";
 import Project2 from "../components/projects/project-2";
 const { excel, tableau } = toolsUsedIcon;
-const { pdf, powerBiDS,tableauDS } = attachmentSIcon;
+const { pdf,tableauDS } = attachmentSIcon;
 
 export const project1: ProjectHeaderInterface = {
   contentComponent: Project1,
@@ -24,20 +25,20 @@ export const project1: ProjectHeaderInterface = {
 
 export const project2: ProjectHeaderInterface = {
   contentComponent: Project2,
-  title: "Project 2",
-  description: "This is a description of project 2",
-  triggerLabel: "Cliccami per il project 2",
-  previewImage:
-    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+  title: "LEGO® Analytics",
+  description: "Explored the evolution of LEGO® sets (1970–2022) leveraging SQL, Excel, Tableau Public, and PowerPoint to deliver a full-cycle analytics project. Key findings include a near doubling in release volume over 20 years; a strong positive correlation between price and piece count; licensed themes (Star Wars, Marvel) featuring higher minifigure density and average prices; a notable price dip in 2003 tied to corporate restructuring; shifts in popular themes across decades; and a downward trend in price-per-piece, reflecting strategic pricing and value improvements.",
+  triggerLabel: "LEGO® Analytics",
+  previewImage: project2Preview,
   tools: [excel, tableau],
+  relevantLink: "https://public.tableau.com/views/LegoProject_17472965432290/LEGOSetsOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   attachments: [
     {
-      type: pdf,
-      link: "https://www.test.com",
+      type: tableauDS,
+      link: "https://public.tableau.com/views/LegoProject_17472965432290/LEGOSetsOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     },
     {
-      type: { ...powerBiDS, name: "Power BI" },
-      link: "https://www.test.com",
+      type: pdf,
+      link: "https://drive.google.com/file/d/1v0gk2X3q4x5n7J6Z8z5v5v5v5v5v5v5/view?usp=sharing",
     },
   ],
 };
