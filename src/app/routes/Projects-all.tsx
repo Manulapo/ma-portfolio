@@ -7,7 +7,7 @@ import ProjectDialog from "../../components/shared/projectDialog";
 import { project1, project2 } from "../../constants/projects";
 import { toolsUsedIcon } from "@/constants";
 
-const legoProjectPdf = `public/PDF/LEGOTrendANALYSIS.pdf`;
+const legoProjectPdf = `/PDF/LEGOTrendANALYSIS.pdf`;
 
 const Projects = () => {
   return (
