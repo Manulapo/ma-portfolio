@@ -108,7 +108,7 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
 export const skillsObj: Record<string, ToolsUsedInterface[]> = {
   Data_Analisys: [
     {
-      name: "MySql",
+      name: "Sql",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {

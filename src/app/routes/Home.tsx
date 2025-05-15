@@ -9,8 +9,8 @@ const HomePage = () => {
     <div className=" md:w-[90vw]">
       <Main />
       <About />
-      <Projects />
       <Skills />
+      <Projects />
       <Certifications />
       <div className="pl-5 text-muted-foreground opacity-50 text-xs">
       2025 ©Chiara Coletta All rights reserved</div>
