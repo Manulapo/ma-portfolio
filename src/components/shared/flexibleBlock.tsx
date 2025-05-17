@@ -57,7 +57,7 @@ const FlexBlock = ({
 }) => {
   const isMobile = useIsMobile();
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
-  const standardHeight = isMobile ? 170 : 200;
+  const standardHeight = isMobile ? 200 : 200;
   const blockHeight =
     height === "full"
       ? standardHeight
@@ -105,7 +105,7 @@ const FlexBlock = ({
             className={`${
               !title &&
               !description &&
-              "w-full h-full flex flex-col justify-center"
+              "w-full h-full flex flex-col justify-center overflow-visible"
             } `}
           >
             {children}
@@ -149,7 +149,7 @@ const FlexBlock = ({
     <Card
       key={dynamicWidth}
       className={cn(
-        `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow`,
+        `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow  relative`,
         backgroundImage && "image justify-end",
         iconType && "p-4 gap-0 relative",
         className

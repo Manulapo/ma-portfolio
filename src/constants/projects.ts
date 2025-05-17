@@ -54,3 +54,5 @@ export const project2: ProjectHeaderInterface = {
     }
   ],
 };
+
+export const projects: ProjectHeaderInterface[] = [project1, project2];

@@ -45,3 +45,69 @@ export const barChartConfig = {
     color: "#60a5fa",
   },
 } satisfies ChartConfig;
+
+export const timeSpentChartConfig = {
+  chrome: {
+    label: "Fixing same data issue again",
+    color: "var(--chart-1)",
+  },
+  safari: {
+    label: "Googling errors",
+    color: "var(--chart-2)",
+  },
+  firefox: {
+    label: "Meetings about data not received",
+    color: "var(--chart-3)",
+  },
+  edge: {
+    label: "Actual data analysis",
+    color: "var(--chart-4)",
+  },
+  other: {
+    label: "Crying inside waiting for a SQL query to finish",
+    color: "var(--chart-5)",
+  },
+} satisfies ChartConfig;
+
+export const timeSpentChartData = [
+  {
+    activity: timeSpentChartConfig.safari.label,
+    visitors: 25,
+    fill: timeSpentChartConfig.safari.color,
+  },
+  {
+    activity: timeSpentChartConfig.chrome.label,
+    visitors: 45,
+    fill: timeSpentChartConfig.chrome.color,
+  },
+  {
+    activity: timeSpentChartConfig.firefox.label,
+    visitors: 15,
+    fill: timeSpentChartConfig.firefox.color,
+  },
+  {
+    activity: timeSpentChartConfig.edge.label,
+    visitors: 10,
+    fill: timeSpentChartConfig.edge.color,
+  },
+  {
+    activity: timeSpentChartConfig.other.label,
+    visitors: 5,
+    fill: timeSpentChartConfig.other.color,
+  },
+];
+
+export const expectationsChartData = [
+  { month: "Data cleaning", desktop: 200, },
+  { month: "Data analysis", desktop: 230 },
+  { month: "Creating dashboards", desktop: 350 },
+  { month: "Realizing data doesn't exist", desktop: 400 },
+  { month: "Create a workaround", desktop: 480 },
+];
+
+export const expectationsChartConfig = {
+  desktop: {
+    label: "expectations in data analysis",
+    color: "var(--chart-1)",
+  },
+} satisfies ChartConfig;
