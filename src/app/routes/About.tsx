@@ -12,7 +12,7 @@ const About = () => {
   return (
     <Section
       title="About me"
-      description="Here's some information about who am i and what i'm passionate about."
+      description="Here's some information about who am I and what I'm passionate about."
     >
       <GridBlock className="overflow-hidden">
         <FlexBlock title="Nice to Meet You!" relevance={2}>
@@ -93,12 +93,10 @@ const About = () => {
             <b className="text-gray-700 font-semibold">business consulting</b>,
             I discovered a strong interest in how data shapes decisions. I'm now
             eager to bring my{" "}
-            <b className="text-gray-700 font-semibold">curiosity for data</b>,
+            <b className="text-gray-700 font-semibold">curiosity for data</b>,{" "}
             <b className="text-gray-700 font-semibold">storytelling mindset</b>,
-            and
-            <b className="text-gray-700 font-semibold">
-              strategic thinking
-            </b>{" "}
+            and{" "}
+            <b className="text-gray-700 font-semibold">strategic thinking</b>{" "}
             into the world of{" "}
             <b className="text-gray-700 font-semibold">marketing analytics</b>.
           </p>

@@ -51,7 +51,7 @@ const Projects = () => {
         <FlexBlock
           title={project2.title}
           backgroundImage={project2.previewImage}
-          relevance={5}
+          relevance={4}
         />
         <FlexBlock relevance={1}>
           <ProjectDialog project={project2}>

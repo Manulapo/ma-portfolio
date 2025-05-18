@@ -21,7 +21,7 @@ const Section = ({
           isMain={isMain ?? false}
         />
       ) : null}
-      <>{children}</>
+      <div className="w-100vw">{children}</div>
     </div>
   );
 };

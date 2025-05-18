@@ -6,7 +6,7 @@ import Skills from "./Skills";
 
 const HomePage = () => {
   return (
-    <div className=" md:w-[90vw]">
+    <div className=" md:w-[95vw]">
       <Main />
       <Skills />
       <About />

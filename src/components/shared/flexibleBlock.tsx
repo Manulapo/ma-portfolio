@@ -59,7 +59,7 @@ const FlexBlock = ({
 }) => {
   const isMobile = useIsMobile();
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
-  const standardHeight = isMobile ? 220 : 220;
+  const standardHeight = isMobile ? 220 : 200;
   const blockHeight =
     height === "full"
       ? standardHeight

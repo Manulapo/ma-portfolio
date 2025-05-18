@@ -44,7 +44,7 @@ const Main = () => {
           <Counter
             time={150}
             limit={projects.length}
-            text="Portoflio projetcs"
+            text="Portfolio Projects"
           />
         </FlexBlock>
 
