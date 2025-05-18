@@ -2,6 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { SidebarTrigger } from "../ui/sidebar";
 import { navbarLinks } from "../../constants";
+import { links } from "@/constants/links";
 
 const NavBar = () => {
   const location = useLocation(); // Get the current location object
@@ -33,11 +34,11 @@ const NavBar = () => {
         })}
       </div>
       <div className="ml-auto md:pr-10 pr-5 flex gap-4 items-center">
-        <p>Welcome!</p>
+        <p>Chiara Coletta</p>
         <Link to={"/about"}>
           <img
             className="rounded-full w-10"
-            src="https://randomuser.me/api/portraits/women/8.jpg"
+            src={links.avatar}
             alt="avatar"
           />
         </Link>

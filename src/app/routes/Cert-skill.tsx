@@ -9,14 +9,14 @@ const CertificationsSkills = () => {
   return (
     <div>
       <Section
-        title="Skills text"
-        description="Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet"
+        title="My Skill Set"
+        description="A blend of analytical tools, marketing frameworks, and technical knowledge—constantly expanding as I keep learning and applying new skills."
       >
         <FilterBlocks />
       </Section>
       <Section
-        title="Certifications text"
-        description="Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet"
+        title="Certifications & Ongoing Learning"
+        description="A proud collection of certifications that reflect my dedication to mastering marketing analytics and data tools—continually expanding as I keep learning and applying new skills."
       >
         <GridBlock>
           {certifications.map((certification, index) => (

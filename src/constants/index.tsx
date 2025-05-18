@@ -1,22 +1,24 @@
+import excelIconBW from "@/assets/icons/bw/excel-icon.png";
+import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
+import excelIcon from "@/assets/icons/excel-icon.png";
+import powerBiIcon from "@/assets/icons/power-bi-icon.png";
+import powerpointIcon from "@/assets/icons/power-point-icon.png";
+import tableauIcon from "@/assets/icons/tableau-icon.png";
 import {
   ChartArea,
   File,
-  Github,
   Home,
   Linkedin,
   Mail,
   Navigation,
   Phone,
   Target,
-  User,
+  User
 } from "lucide-react";
 import { SidebarIconType, ToolsUsedInterface } from "../../types";
-import excelIcon from "@/assets/icons/excel-icon.png";
-import powerpointIcon from "@/assets/icons/power-point-icon.png";
-import excelIconBW from "@/assets/icons/bw/excel-icon.png";
-import tableauIconBW from "@/assets/icons/bw/tableau-icon.png";
-import tableauIcon from "@/assets/icons/tableau-icon.png";
-import powerBiIcon from "@/assets/icons/power-bi-icon.png";
+import { links } from "./links";
+
+
 
 export const attachmentSIcon = {
   pdf: {
@@ -76,32 +78,32 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
   linkedin: {
     name: "LinkedIn",
     icon: Linkedin,
-    link: "https://www.linkedin.com/in/your-profile",
+    link: links.linkedin,
   },
-  github: {
-    name: "GitHub",
-    icon: Github,
-    link: "https://www.github.com/your-profile",
-  },
+  // github: {
+  //   name: "GitHub",
+  //   icon: Github,
+  //   link: links.github ?? '',
+  // },
   email: {
     name: "Email",
     icon: Mail,
-    link: "mailto:test@gmail.com",
+    link: "mailto:coletta.chiara24@gmail.com",
   },
   telephone: {
     name: "Telephone",
     icon: Phone,
-    link: "tel:+1234567890",
+    link: "tel:+45 91 10 88 69",
   },
   location: {
-    name: "Location",
+    name: "Copengahen, Denmark",
     icon: Navigation,
     link: "https://www.google.com/maps/place/your-location",
   },
   resume: {
     name: "Resume",
     icon: File,
-    link: "/path/to/your/resume.pdf",
+    link: links.resumeePDF,
   },
 };
 
@@ -151,6 +153,7 @@ export const navbarLinks = {
     link: "/skills",
   },
 };
+
 
 export const blockColours = [
   // "#FFB3BA", // Light Pink

@@ -48,7 +48,7 @@ const AppSidebar = () => {
       {/* About me */}
       <div className="pl-5 px-3 md:pt-20">
         <SidebarHeader>
-          <h1 className="h2-bold text-2xl">Links</h1>
+          <h1 className="h2-bold text-2xl">Info</h1>
         </SidebarHeader>
         <div className="border-t-1 my-4"></div>
         <SidebarContent>

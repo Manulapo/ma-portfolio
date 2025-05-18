@@ -8,8 +8,8 @@ const HomePage = () => {
   return (
     <div className=" md:w-[90vw]">
       <Main />
-      <About />
       <Skills />
+      <About />
       <Projects />
       <Certifications />
       <div className="pl-5 text-muted-foreground opacity-50 text-xs">

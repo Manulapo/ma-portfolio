@@ -19,7 +19,7 @@ import {
 export function ExpectationsDAtaAnalysisChart({ title }: { title: string }) {
   return (
     <CardContent className="flex-1 pb-0 w-full px-0">
-      <div className="absolute top-2 right-4">
+      <div className="absolute top-5 right-5">
         <h3 className="text-lg font-bold max-w-60 text-right leading-4.5">{title}</h3>
       </div>
       <ChartContainer config={expectationsChartConfig}>

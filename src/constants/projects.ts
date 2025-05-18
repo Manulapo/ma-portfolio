@@ -31,7 +31,7 @@ export const project1: ProjectHeaderInterface = {
 
 export const project2: ProjectHeaderInterface = {
   contentComponent: Project2,
-  title: "LEGO Analytics",
+  title: "LEGO Sets Analysis",
   description:
     "Explored the evolution of LEGO® sets (1970–2022) leveraging SQL, Excel, Tableau Public, and PowerPoint to deliver a full-cycle analytics project. Key findings include a near doubling in release volume over 20 years; a strong positive correlation between price and piece count; licensed themes (Star Wars, Marvel) featuring higher minifigure density and average prices; a notable price dip in 2003 tied to corporate restructuring; shifts in popular themes across decades; and a downward trend in price-per-piece, reflecting strategic pricing and value improvements.",
   triggerLabel: "LEGO® Analytics",

@@ -101,7 +101,7 @@ const Project1 = ({ className }: { className?: string }) => {
       />
 
       <p className="text-muted-foreground my-3">
-        Dahboard design was inspired by Baraa Khatib lil Salkini's work
+        Dahboard design was inspired by Baraa Khatib Salkini's work
       </p>
     </div>
   );

@@ -37,6 +37,7 @@ const FlexBlock = ({
   linkTo,
   downloadLink,
   backgroundColor = getColour(),
+  noHover,
   iconType,
   children,
 }: {
@@ -48,6 +49,7 @@ const FlexBlock = ({
   backgroundImage?: string;
   backgroundColor?: string;
   linkTo?: string;
+  noHover?:boolean,
   downloadLink?: string;
   iconType?: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
@@ -57,7 +59,7 @@ const FlexBlock = ({
 }) => {
   const isMobile = useIsMobile();
   const [dynamicWidth, setDynamicWidth] = useState<string>("");
-  const standardHeight = isMobile ? 200 : 200;
+  const standardHeight = isMobile ? 220 : 220;
   const blockHeight =
     height === "full"
       ? standardHeight
@@ -83,7 +85,7 @@ const FlexBlock = ({
                   <div
                     className={cn(
                       backgroundImage
-                        ? "text-white text-3xl text-shadow-lg"
+                        ? "text-white text-3xl text-shadow-lg bg-black rounded-sm px-2 py-1"
                         : "text-black text-xl",
                       "font-bold text-nowrap"
                     )}
@@ -149,7 +151,8 @@ const FlexBlock = ({
     <Card
       key={dynamicWidth}
       className={cn(
-        `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow  relative`,
+        `p-4 py-6 px-4 gap-2 flex flex-col items-start rounded-md flexblock shadow relative`,
+        noHover ? 'noHover' : '',
         backgroundImage && "image justify-end",
         iconType && "p-4 gap-0 relative",
         className
@@ -161,6 +164,7 @@ const FlexBlock = ({
         backgroundImage: backgroundImage
           ? `url('${backgroundImage}')`
           : undefined,
+        backgroundSize: backgroundImage ? "cover" : undefined,
         backgroundColor: backgroundImage
           ? undefined
           : backgroundColor || undefined,
@@ -171,12 +175,11 @@ const FlexBlock = ({
           to={linkTo}
           className="w-full h-full flex flex-col justify-end"
           style={{ textDecoration: "none" }}
-          target="_blank"
         >
           {renderContent}
         </Link>
       ) : downloadLink ? (
-        <a href={downloadLink} target="_blank" rel="noopener noreferrer">
+        <a href={downloadLink} className="w-full h-full flex flex-col justify-end" target="_blank" rel="noopener noreferrer">
           {renderContent}
         </a>
       ) : (

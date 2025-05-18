@@ -3,10 +3,11 @@ import Section from "../../components/shared/section";
 
 const Skills = () => {
   return (
-    <Section
-        title="Skills text"
-        description="Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet"
-      >
+<Section
+  title="My Skill Set"
+  description="A blend of analytical tools, marketing frameworks, and technical knowledge—constantly expanding as I keep learning and applying new skills."
+>
+
         <FilterBlocks />
       </Section>
   );
