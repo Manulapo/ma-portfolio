@@ -7,6 +7,7 @@ import GridBlock from "../../components/shared/blockgrid";
 import Counter from "../../components/shared/counter";
 import FlexBlock from "../../components/shared/flexibleBlock";
 import Section from "../../components/shared/section";
+import { getYears } from "@/lib/utils";
 
 const About = () => {
   return (
@@ -68,7 +69,7 @@ const About = () => {
 
         {/* block */}
         <FlexBlock relevance={1} iconType={Briefcase}>
-          <Counter time={150} limit={2.5} text="Years of Experience" />
+          <Counter time={150} limit={getYears(2023)} text="Years of Experience" />
         </FlexBlock>
 
         {/* block */}
