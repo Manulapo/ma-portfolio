@@ -6,20 +6,21 @@ import {
   CartesianGrid,
   LabelList,
   XAxis,
-  YAxis,
+  YAxis
 } from "recharts";
 
 import { CardContent } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
-import { expectationsChartConfig, expectationsChartData } from "./chartConfig";
+import {
+  expectationsChartConfig,
+  expectationsChartData
+} from "../../constants/chartConfig";
 
-
-
-export function DataAnalysisBarChart({ title }: { title: string }) {
+export function ExpectationsDAtaAnalysisChart({ title }: { title: string }) {
   return (
     <CardContent className="flex-1 pb-0 w-full px-0">
       <div className="absolute top-2 right-4">
-        <h3 className="text-lg font-bold max-w-60 text-right">{title}</h3>
+        <h3 className="text-lg font-bold max-w-60 text-right leading-4.5">{title}</h3>
       </div>
       <ChartContainer config={expectationsChartConfig}>
         <BarChart
@@ -51,7 +52,7 @@ export function DataAnalysisBarChart({ title }: { title: string }) {
               dataKey="month"
               position="insideLeft"
               offset={8}
-              fontSize={12}
+              fontSize={13}
               fill="white"
             />
           </Bar>

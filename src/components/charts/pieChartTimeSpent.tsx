@@ -13,7 +13,7 @@ export function PieChartTimeSpentComponent({ title }: { title: string }) {
   return (
     <CardContent className="flex-1 pb-0 w-full px-0">
       <div className="absolute top-4 left-4">
-        <h3 className="text-lg font-bold">{title}</h3>
+        <h3 className="text-lg font-bold max-w-60 text-right leading-4.5">{title}</h3>
       </div>
       <ChartContainer
         config={timeSpentChartConfig}
@@ -29,7 +29,6 @@ export function PieChartTimeSpentComponent({ title }: { title: string }) {
             dataKey="visitors"
             nameKey="activity"
           />
-
           <Legend
             iconSize={5}
             layout="vertical"

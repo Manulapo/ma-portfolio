@@ -98,16 +98,20 @@ export const timeSpentChartData = [
 ];
 
 export const expectationsChartData = [
-  { month: "Data cleaning", desktop: 200, },
-  { month: "Data analysis", desktop: 230 },
-  { month: "Creating dashboards", desktop: 350 },
-  { month: "Realizing data doesn't exist", desktop: 400 },
-  { month: "Create a workaround", desktop: 480 },
+  { month: "Data Cleaning", desktop: 200, fill: "var(--chart-2)" },
+  { month: "Data Analysis", desktop: 230, fill: "var(--chart-3)" },
+  { month: "Creating dashboards", desktop: 350, fill: "var(--chart-4)" },
+  {
+    month: "Realizing data doesn't exist",
+    desktop: 400,
+    fill: "var(--chart-5)",
+  },
+  { month: "Create a workaround", desktop: 480, fill: "var(--chart-1)" },
 ];
 
 export const expectationsChartConfig = {
   desktop: {
-    label: "expectations in data analysis",
+    label: "desktop",
     color: "var(--chart-1)",
   },
 } satisfies ChartConfig;
