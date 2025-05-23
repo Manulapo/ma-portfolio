@@ -96,7 +96,7 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
     link: "tel:+45 91 10 88 69",
   },
   location: {
-    name: "Copengahen, Denmark",
+    name: "Copenhagen, Denmark",
     icon: Navigation,
     link: "https://www.google.com/maps/place/your-location",
   },
