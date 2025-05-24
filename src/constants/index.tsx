@@ -103,7 +103,7 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
   resume: {
     name: "Resume",
     icon: File,
-    link: links.resumeePDF,
+    link: links.resumePDF,
   },
 };
 

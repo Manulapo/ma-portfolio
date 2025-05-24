@@ -2,7 +2,7 @@ import linkedinIcon from "../assets/icons/linkedin.png";
 import denmarkFlag from "../assets/images/denmarkFlag.png";
 import legoBrick from "../assets/icons/lego_brick.png";
 
-const resumeePDF = `${window.location.origin}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
+const resumePDF = `${window.location.origin}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
 const dataAnalyticsPDF = `${window.location.origin}/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
 const pythonCertificationPDF = `${window.location.origin}/files/PDF/certifications/Coursera_PythonCertification.pdf`;
 const dataAnalysisSprSQLPDF = `${window.location.origin}/files/PDF/certifications/Data Analysis with Spreadsheets and SQL_certificate.pdf`;
@@ -15,7 +15,7 @@ const avatar = `${window.location.origin}/images/other/me.png`;
 
 
 export const links = {
-  resumeePDF,
+  resumePDF,
   dataAnalyticsPDF,
   pythonCertificationPDF,
   dataAnalysisSprSQLPDF,

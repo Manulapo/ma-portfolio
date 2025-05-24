@@ -78,11 +78,11 @@ const About = () => {
         </FlexBlock>
 
         {/* block */}
-        <FlexBlock relevance={1} downloadLink={links.resumeePDF}>
+        <FlexBlock relevance={1} downloadLink={links.resumePDF}>
           <BigIcon
             iconType={FileUser}
             iconClass="text-purple-400"
-            text={"My Resumee"}
+            text={"My Resume"}
             animation={"animate-pulse"}
           />
         </FlexBlock>
