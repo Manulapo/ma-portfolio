@@ -85,7 +85,7 @@ const AppSidebar = () => {
           2025 ©Chiara Coletta All rights reserved
         </div>
         <div className="text-muted-foreground opacity-50 text-xs">
-          Produced by @La Porta Manuel
+          Produced by <Link rel="stylesheet" target="_blank" to="https://manuel-la-porta.me">©La Porta Manuel</Link>
         </div>
       </SidebarFooter>
     </Sidebar>

@@ -11,6 +11,7 @@ const dataAnalyticsFoundationsPDF = `${window.location.origin}/files/PDF/certifi
 const marketingAnalyticsPDF = `${window.location.origin}/files/PDF/certifications/Marketing Analytics with Meta Certification.pdf`;
 const marketingSciencePDF = `${window.location.origin}/files/PDF/certifications/Meta Marketing Science Certification Exam.pdf`;
 const statisticFoundationsPDF = `${window.location.origin}/files/PDF/certifications/Statistics Foundations.pdf`;
+const pythonDataAnalyticsMavenPDF = `${window.location.origin}/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
 const avatar = `${window.location.origin}/images/other/me.png`;
 
 
@@ -24,9 +25,11 @@ export const links = {
   marketingAnalyticsPDF,
   marketingSciencePDF,
   statisticFoundationsPDF,
+  pythonDataAnalyticsMavenPDF,
   avatar,
   linkedin: "https://www.linkedin.com/in/chiara-coletta/",
   website: "https://www.chiara-coletta.space",
+  vizzy: "https://vizzy.com/@chiaracoletta98",
   github: "",
 };
 

@@ -4,6 +4,7 @@ import excelIcon from "@/assets/icons/excel-icon.png";
 import powerBiIcon from "@/assets/icons/power-bi-icon.png";
 import powerpointIcon from "@/assets/icons/power-point-icon.png";
 import tableauIcon from "@/assets/icons/tableau-icon.png";
+import vizzy from "@/assets/icons/vizzy-icon.png";
 import {
   ChartArea,
   File,
@@ -98,7 +99,12 @@ export const sidebarIcon: Record<string, SidebarIconType> = {
   location: {
     name: "Copenhagen, Denmark",
     icon: Navigation,
-    link: "https://www.google.com/maps/place/your-location",
+    link: "https://maps.app.goo.gl/fGzJmgChqhHbZqrH7",
+  },
+  vizzy: {
+    name: "Vizzy Profile",
+    icon: vizzy,
+    link: links.vizzy,
   },
   resume: {
     name: "Resume",

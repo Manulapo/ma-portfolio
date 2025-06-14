@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import About from "./About";
 import Certifications from "./Certifications";
 import Main from "./Main";
@@ -13,9 +14,10 @@ const HomePage = () => {
       <Projects />
       <Certifications />
       <div className="pl-5 text-muted-foreground opacity-50 text-xs">
-      2025 ©Chiara Coletta All rights reserved</div>
+        2025 ©Chiara Coletta All rights reserved</div>
       <div className="pl-5 text-muted-foreground opacity-50 text-xs">
-      Produced by @La Porta Manuel</div>
+        Produced by <Link rel="stylesheet" target="_blank" to="https://manuel-la-porta.me">©La Porta Manuel</Link>
+      </div>
     </div>
   );
 };

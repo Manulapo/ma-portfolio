@@ -1,46 +1,16 @@
 import metaLogo from "@/assets/images/logos/meta_logo.png";
+import mavenLogo from "@/assets/images/logos/maven_logo.png";
+
 import { links } from "./links";
 
-export const certifications =[
+export const certifications = [
   {
-    name: "Marketing Analytics Foundations",
-    description: "Core principles of digital marketing analytics.",
-    image: metaLogo,
-    issuedBy: "Meta & Coursera",
-    link: links.dataAnalyticsFoundationsPDF,
-    date: "Nov, 2023",
-  },
-  {
-    name: "Data Analytics",
-    description: "Entry-level data cleaning, analysis & visualization with Python, SQL, and statistics.",
-    image: metaLogo,
-    issuedBy: "Meta & Coursera",
-    link: links.dataAnalyticsPDF,
-    date: "Jan, 2024",
-  },
-  {
-    name: "Data Analysis with Spreadsheets and SQL",
-    description: "Spreadsheet data cleaning, SQL querying, and dashboard creation.",
-    image: metaLogo,
-    issuedBy: "Meta & Coursera",
-    link: links.dataAnalysisSprSQLPDF,
-    date: "Apr, 2024",
-  },
-  {
-    name: "Python for Everybody",
-    description: "Core Python skills for data gathering, cleaning, and visualization.",
-    image: metaLogo,
-    issuedBy: "Meta & Coursera",
-    link: links.pythonCertificationPDF,
-    date: "Aug, 2024",
-  },
-  {
-    name: "Data Analytics Methods for Marketing",
-    description: "Marketing mix modeling, attribution, and forecasting techniques.",
-    image: metaLogo,
-    issuedBy: "Meta & Coursera",
-    link: links.dataAnalyticsMethodMrktPDF,
-    date: "Oct, 2024",
+    name: "Python Foundations for Data Analysis",
+    description: "Core Python skills for data analysis and visualization.",
+    image: mavenLogo,
+    issuedBy: "Maven Analytics",
+    link: links.pythonDataAnalyticsMavenPDF,
+    date: "Jun, 2025",
   },
   {
     name: "Marketing Analytics with Meta",
@@ -65,6 +35,46 @@ export const certifications =[
     issuedBy: "Meta & Coursera",
     link: links.statisticFoundationsPDF,
     date: "Nov, 2024",
+  },
+  {
+    name: "Data Analytics Methods for Marketing",
+    description: "Marketing mix modeling, attribution, and forecasting techniques.",
+    image: metaLogo,
+    issuedBy: "Meta & Coursera",
+    link: links.dataAnalyticsMethodMrktPDF,
+    date: "Oct, 2024",
+  },
+  {
+    name: "Python Data Analytics",
+    description: "Core Python skills for data gathering, cleaning, and visualization.",
+    image: metaLogo,
+    issuedBy: "Meta & Coursera",
+    link: links.pythonCertificationPDF,
+    date: "Aug, 2024",
+  },
+  {
+    name: "Data Analysis with Spreadsheets and SQL",
+    description: "Spreadsheet data cleaning, SQL querying, and dashboard creation.",
+    image: metaLogo,
+    issuedBy: "Meta & Coursera",
+    link: links.dataAnalysisSprSQLPDF,
+    date: "Apr, 2024",
+  },
+  {
+    name: "Data Analytics",
+    description: "Entry-level data cleaning, analysis & visualization with Python, SQL, and statistics.",
+    image: metaLogo,
+    issuedBy: "Meta & Coursera",
+    link: links.dataAnalyticsPDF,
+    date: "Jan, 2024",
+  },
+  {
+    name: "Marketing Analytics Foundations",
+    description: "Core principles of digital marketing analytics.",
+    image: metaLogo,
+    issuedBy: "Meta & Coursera",
+    link: links.dataAnalyticsFoundationsPDF,
+    date: "Nov, 2023",
   },
 ]
 
