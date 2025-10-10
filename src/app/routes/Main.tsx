@@ -30,7 +30,7 @@ const Main = () => {
         <FlexBlock title="I'm Chiara" relevance={2}>
           <p>
             <b className="text-gray-700 font-semibold">
-              Junior Marketing Analyst
+              Marketing Analyst
             </b>{" "}
             with a Background in{" "}
             <b className="text-gray-700 font-semibold">Business Consulting</b>{" "}

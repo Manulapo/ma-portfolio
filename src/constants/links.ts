@@ -12,6 +12,7 @@ const marketingAnalyticsPDF = `${window.location.origin}/files/PDF/certification
 const marketingSciencePDF = `${window.location.origin}/files/PDF/certifications/Meta Marketing Science Certification Exam.pdf`;
 const statisticFoundationsPDF = `${window.location.origin}/files/PDF/certifications/Statistics Foundations.pdf`;
 const pythonDataAnalyticsMavenPDF = `${window.location.origin}/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
+const hubSpotSocialMediaReady = `${window.location.origin}/files/PDF/certifications/HubSpot_SocialMediaCertified.jpg`;
 const avatar = `${window.location.origin}/images/other/me.png`;
 
 
@@ -26,6 +27,7 @@ export const links = {
   marketingSciencePDF,
   statisticFoundationsPDF,
   pythonDataAnalyticsMavenPDF,
+  hubSpotSocialMediaReady,
   avatar,
   linkedin: "https://www.linkedin.com/in/chiara-coletta/",
   website: "https://www.chiara-coletta.space",

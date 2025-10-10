@@ -1,9 +1,18 @@
 import metaLogo from "@/assets/images/logos/meta_logo.png";
 import mavenLogo from "@/assets/images/logos/maven_logo.png";
+import hubspotLogo from "@/assets/images/logos/hubspot_logo.png";
 
 import { links } from "./links";
 
 export const certifications = [
+  {
+    name: "Social Media Certified",
+    description: "Inbound social media strategy covering content creation, engagement, policy design, and ROI reporting.",
+    image: hubspotLogo,
+    issuedBy: "HubSpot Academy",
+    link: links.hubSpotSocialMediaReady,
+    date: "Sep, 2025",
+  },
   {
     name: "Python Foundations for Data Analysis",
     description: "Core Python skills for data analysis and visualization.",
