@@ -12,6 +12,7 @@ const marketingAnalyticsPDF = `${window.location.origin}/files/PDF/certification
 const marketingSciencePDF = `${window.location.origin}/files/PDF/certifications/Meta Marketing Science Certification Exam.pdf`;
 const statisticFoundationsPDF = `${window.location.origin}/files/PDF/certifications/Statistics Foundations.pdf`;
 const pythonDataAnalyticsMavenPDF = `${window.location.origin}/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
+const PythonPandasCertificationMavenPDF = `${window.location.origin}/files/PDF/certifications/PythonPandasCertification.pdf`
 const hubSpotSocialMediaReady = `${window.location.origin}/files/PDF/certifications/HubSpot_SocialMediaCertified.jpg`;
 const avatar = `${window.location.origin}/images/other/me.png`;
 
@@ -28,6 +29,7 @@ export const links = {
   statisticFoundationsPDF,
   pythonDataAnalyticsMavenPDF,
   hubSpotSocialMediaReady,
+  PythonPandasCertificationMavenPDF,
   avatar,
   linkedin: "https://www.linkedin.com/in/chiara-coletta/",
   website: "https://www.chiara-coletta.space",
@@ -37,8 +39,8 @@ export const links = {
 
 
 export const images = {
-    avatar,
-    linkedinIcon,
-    denmarkFlag,
-    legoBrick
+  avatar,
+  linkedinIcon,
+  denmarkFlag,
+  legoBrick
 }

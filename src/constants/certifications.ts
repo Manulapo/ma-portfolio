@@ -6,6 +6,14 @@ import { links } from "./links";
 
 export const certifications = [
   {
+    name: "Data Analysis with Python and Pandas",
+    description: "Hands-on course teaching NumPy and Pandas for data manipulation, analysis, and visualization.",
+    image: mavenLogo,
+    issuedBy: "Maven Analytics",
+    link: links.PythonPandasCertificationMavenPDF,
+    date: "Dec, 2025",
+  },
+  {
     name: "Social Media Certified",
     description: "Inbound social media strategy covering content creation, engagement, policy design, and ROI reporting.",
     image: hubspotLogo,
